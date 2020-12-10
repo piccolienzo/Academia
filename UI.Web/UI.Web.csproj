@@ -80,7 +80,6 @@
     <Content Include="ModulosUsuarios.aspx" />
     <Content Include="Personas.aspx" />
     <Content Include="Planes.aspx" />
-    <Content Include="UI.Web.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -179,13 +178,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="UI.Web.aspx.cs">
-      <DependentUpon>UI.Web.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI.Web.aspx.designer.cs">
-      <DependentUpon>UI.Web.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
