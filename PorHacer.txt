@@ -1,6 +1,6 @@
 
 
-VALIDACIOENS WEB OK = Usuarios,personas,planes,Modulos,Especialidades,comisiones
+
 
 
 *agregar validaciones web : Docentes cursos
