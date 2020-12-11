@@ -8,6 +8,9 @@
 *Terminar ABM web: Docentes
 
 *Hacer reportes x web para imprimir.
+-Notas: hecho
+-Planes: por hacer.
+-Cursos:
 
 
 
