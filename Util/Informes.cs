@@ -16,6 +16,31 @@ namespace Util
         private ComisionLogic comisionLogic;
         private PersonaLogic personaLogic;
         private MateriaLogic materiaLogic;
+        private PlanLogic planLogic;
+        private EspecialidadLogic especialidadLogic;
+
+        public PlanLogic PlanLogic
+        {
+            get
+            {
+                if (planLogic == null)
+                {
+                    planLogic = new PlanLogic();
+                }
+                return planLogic;
+            }
+        }
+        public EspecialidadLogic EspecialidadLogic
+        {
+            get
+            {
+                if(especialidadLogic==null)
+                {
+                    especialidadLogic = new EspecialidadLogic();
+                }
+                return especialidadLogic;
+            }
+        }
 
 
         public AlumnoInscripcionLogic AlumnoInscripcionLogic {
@@ -75,6 +100,8 @@ namespace Util
 
 
 
+
+
         public List<InformeNotas> GetInformeNotas()
         {
             List<InformeNotas> informeNotas = new List<InformeNotas>();
@@ -112,8 +139,55 @@ namespace Util
             return informeNotas;
         }
 
+        public List<InformePlanes> GetInformePlanes()
+        {
+            List<Comision> comisiones = ComisionLogic.GetAll();
+            List<Business.Entities.Personas> personas = PersonaLogic.GetAll();
+            List<Especialidad> especialidades = EspecialidadLogic.GetAll();
+            List<Plan> planes = PlanLogic.GetAll();
+
+            List < InformePlanes > informePlanes= (
+                from plan in planes
+                join especialidad in especialidades on plan.IdEspecialidad equals especialidad.ID
+                join comision in comisiones on plan.ID equals comision.IdPlan
+                join persona in personas on plan.ID equals persona.IdPlan
+
+                where persona.TipoPersona == Business.Entities.Personas.TiposPersonas.Alumno
+                
+               
+               
+            
+
+                select new InformePlanes
+                {
+                    IdPlan = plan.ID,
+                    DescripcionPlan = plan.Descripcion,
+                    DescripcionEspecialidad = especialidad.Descripcion,
+                    DescripcionComision = comision.Descripcion,
+                    TipoPersona = persona.TipoPersona.ToString(),
+                    Legajo = persona.Legajo,
+
+                }
 
 
+              ).ToList();
+            return informePlanes;
+
+        }
+
+
+
+
+
+    }
+    class InformePlanes
+    {
+        public int IdPlan { get; set; }
+        public string DescripcionPlan { get; set; }
+        public string DescripcionEspecialidad { get; set; }
+        public string DescripcionComision { get; set; }
+        public string TipoPersona { get; set; }
+        public int Legajo { get; set; }
     }
     
     class InformeNotas

@@ -13,5 +13,7 @@
 -Cursos:
 
 
+id plan,descripcion ,desc especialidad, cant comisiones plan, cant_personas plan.
 
+List < InformePlanes > 
 

@@ -11,7 +11,7 @@ namespace UI.Web
 {
 
 
-    public partial class ReporteNotas2
+    public partial class ReportePlanes
     {
 
         /// <summary>
