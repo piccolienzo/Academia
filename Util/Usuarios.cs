@@ -23,6 +23,8 @@ namespace Util
 
     }
 
+
+
     public class UsuariosNomAP  
     {
         public string NombreApellido { get; set; }

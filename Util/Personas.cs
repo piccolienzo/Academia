@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Entities;
+using Business.Logic;
 
 namespace Util
 {
@@ -29,6 +30,19 @@ namespace Util
 
 
         }
+
+        public static List<Business.Entities.Personas> GetDocentes()
+        {
+            List<Business.Entities.Personas> personas = new Business.Logic.PersonaLogic().GetAll();
+
+
+            List<Business.Entities.Personas> docentes = (from docente in personas
+                                                         where docente.TipoPersona == Business.Entities.Personas.TiposPersonas.Docente
+                                                         select docente
+                                                         ).ToList();
+            return docentes;
+        }
+
         public class TiposPersonas
         {
             public int Numero { get; set; }

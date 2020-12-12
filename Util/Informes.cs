@@ -175,11 +175,49 @@ namespace Util
 
         }
 
+        public List<InformeCursos> GetInformeComisiones()
+        {
+            List<AlumnoInscripcion> alumnoInscripciones = AlumnoInscripcionLogic.GetAll();
+            List<Curso> cursos = CursoLogic.GetAll();
+            List<Comision> comisiones = ComisionLogic.GetAll();
+            List<Business.Entities.Personas> personas = PersonaLogic.GetAll();
+            List<Materia> materias = MateriaLogic.GetAll();
 
+            List<InformeCursos> x = (
+
+                from curso in cursos
+                join materia in materias on curso.IdMateria equals materia.ID
+                join comision in comisiones on curso.IdComision equals comision.ID
+                join alumnoinscripcion in alumnoInscripciones on curso.ID equals alumnoinscripcion.IdCurso
+
+                 select new InformeCursos
+                 {
+                     IdCurso = curso.ID,
+                     Cupo = curso.Cupo,
+                     DescComision = comision.Descripcion,
+                     DescMateria = materia.Descripcion,
+                     IdAlumnos = alumnoinscripcion.IdAlumno
+                 }
+
+
+
+                ).ToList();
+            return x;
+
+        }
 
 
 
     }
+    class InformeCursos
+    {
+        public int IdCurso { get; set; }
+        public int Cupo { get; set; }
+        public string DescMateria { get; set; }
+        public string DescComision { get; set; }
+        public int IdAlumnos { get; set; }
+    }
+
     class InformePlanes
     {
         public int IdPlan { get; set; }

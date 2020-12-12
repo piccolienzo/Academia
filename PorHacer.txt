@@ -7,13 +7,4 @@
 *Terminar abms escritorio que faltan: Personas. Docentes (Revisar validaciones de los demas)
 *Terminar ABM web: Docentes
 
-*Hacer reportes x web para imprimir.
--Notas: hecho
--Planes: por hacer.
--Cursos:
-
-
-id plan,descripcion ,desc especialidad, cant comisiones plan, cant_personas plan.
-
-List < InformePlanes > 
 
