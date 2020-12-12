@@ -9,7 +9,7 @@ namespace Business.Entities
     {
         public enum TiposCargos
         {
-            Teoria,
+            Teoria=1,
             Practica,
             Auxiliar,
             Practicante

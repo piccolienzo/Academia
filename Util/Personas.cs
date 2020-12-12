@@ -31,6 +31,25 @@ namespace Util
 
         }
 
+        public static List<TiposCargos> GetTipoCargos()
+        {
+            List<TiposCargos> tc = new List<TiposCargos>();
+            int[] numeros = (int[])Enum.GetValues(typeof(Business.Entities.DocenteCurso.TiposCargos));
+            string[] nombres = Enum.GetNames(typeof(Business.Entities.DocenteCurso.TiposCargos));
+            for (int x = 0; x < numeros.Length; x++)
+            {
+                TiposCargos tc2 = new TiposCargos
+                {
+                    Numero = numeros[x],
+                    Nombre = nombres[x]
+                };
+                tc.Add(tc2);
+            }
+            return tc;
+        }
+
+
+
         public static List<Business.Entities.Personas> GetDocentes()
         {
             List<Business.Entities.Personas> personas = new Business.Logic.PersonaLogic().GetAll();
@@ -44,6 +63,11 @@ namespace Util
         }
 
         public class TiposPersonas
+        {
+            public int Numero { get; set; }
+            public string Nombre { get; set; }
+        }
+        public class TiposCargos
         {
             public int Numero { get; set; }
             public string Nombre { get; set; }
