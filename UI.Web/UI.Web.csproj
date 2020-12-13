@@ -104,6 +104,7 @@
     <Content Include="ReporteCursos.aspx" />
     <Content Include="ReporteNotas.aspx" />
     <Content Include="ReportePlanes.aspx" />
+    <Content Include="Reportes.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="ReportePlanes.aspx.designer.cs">
       <DependentUpon>ReportePlanes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

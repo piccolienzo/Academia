@@ -50,26 +50,26 @@
     <asp:Panel ID="PanelABM" runat="server">
         <div>
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" ReadOnly="True"></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-            <asp:DropDownList ID="DropDownList2" runat="server">
+            <asp:TextBox ID="TextBox3" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
             </asp:DropDownList>
             <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.CursoLogic"></asp:ObjectDataSource>
         </div>
         <div>
             <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-            <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:TextBox ID="TextBox4" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
             </asp:DropDownList>
             <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="GetDocentes" TypeName="Util.Personas"></asp:ObjectDataSource>
         </div>
         <div>
             <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-            <asp:DropDownList ID="DropDownList3" runat="server">
+            <asp:TextBox ID="TextBox5" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True">
             </asp:DropDownList>
             <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" SelectMethod="GetTipoCargos" TypeName="Util.Personas"></asp:ObjectDataSource>
         </div>
