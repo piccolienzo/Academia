@@ -3,8 +3,11 @@
 
 
 
-*agregar validaciones web : Docentes cursos
+
 *Terminar abms escritorio que faltan: Personas. Docentes (Revisar validaciones de los demas)
+
+
+*agregar validaciones web : Docentes cursos
 *Terminar ABM web: Docentes
 
 
