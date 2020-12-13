@@ -10,4 +10,6 @@
 *agregar validaciones web : Docentes cursos
 *Terminar ABM web: Docentes
 
+Ultima version : 1.8
+
 
