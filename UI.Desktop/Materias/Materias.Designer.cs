@@ -70,7 +70,7 @@
             this.DataGridViewMaterias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
@@ -97,7 +97,7 @@
             // idMateria
             // 
             this.idMateria.DataPropertyName = "id";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
@@ -110,7 +110,7 @@
             // descripcionMateria
             // 
             this.descripcionMateria.DataPropertyName = "descripcion";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -123,7 +123,7 @@
             // idPlan
             // 
             this.idPlan.DataPropertyName = "idplan";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
@@ -135,7 +135,7 @@
             // hsSemanales
             // 
             this.hsSemanales.DataPropertyName = "hssemanales";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
@@ -148,7 +148,7 @@
             // hsTotales
             // 
             this.hsTotales.DataPropertyName = "hstotales";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
@@ -167,7 +167,7 @@
             this.BotonModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.BotonModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BotonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonModificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonModificar.Location = new System.Drawing.Point(305, 619);
             this.BotonModificar.Name = "BotonModificar";
             this.BotonModificar.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -189,7 +189,7 @@
             this.BotonBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.BotonBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BotonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonBorrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBorrar.Location = new System.Drawing.Point(525, 619);
             this.BotonBorrar.Name = "BotonBorrar";
             this.BotonBorrar.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -211,7 +211,7 @@
             this.BotonAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.BotonAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BotonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAgregar.Location = new System.Drawing.Point(95, 619);
             this.BotonAgregar.Name = "BotonAgregar";
             this.BotonAgregar.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -233,7 +233,7 @@
             this.BotonActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.BotonActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BotonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonActualizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonActualizar.Location = new System.Drawing.Point(730, 619);
             this.BotonActualizar.Name = "BotonActualizar";
             this.BotonActualizar.OnHoverBorderColor = System.Drawing.Color.Gray;

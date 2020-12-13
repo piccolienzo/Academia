@@ -123,15 +123,15 @@ namespace UI.Desktop
             {
 
 
-                MessageBox.Show("Todo ok ");
+                MessageBox.Show("Guardado");
                 this.GuardarCambios();
                 this.Close();
 
             }
             else
             {
-                // this.Notificar("Existen errores", );
-                MessageBox.Show("Todo mal :/ ");
+               
+                MessageBox.Show("Existen errores");
 
 
 

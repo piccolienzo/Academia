@@ -216,6 +216,9 @@
     <EmbeddedResource Include="DocentesCursos\DocentesCursos.resx">
       <DependentUpon>DocentesCursos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocentesCursos\DocentesCursosDesktop.resx">
+      <DependentUpon>DocentesCursosDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Especialidades\Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personas\Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\PersonasDesktop.resx">
+      <DependentUpon>PersonasDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Planes\Planes.resx">
       <DependentUpon>Planes.cs</DependentUpon>
@@ -288,6 +294,10 @@
     <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
       <Project>{614d59d0-caca-4435-92de-ab2b15f14424}</Project>
       <Name>Business.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{18975102-e2a4-40f1-b258-b6aa409d358b}</Project>
+      <Name>Util</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

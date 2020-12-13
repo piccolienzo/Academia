@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Business.Entities
 {
-    public class Personas : BusinessEntity
+    public class Persona : BusinessEntity
     {
         public enum TiposPersonas
         {

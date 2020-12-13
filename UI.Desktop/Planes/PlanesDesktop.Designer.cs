@@ -173,6 +173,7 @@
             // 
             // TextBoxIdEspecialidad
             // 
+            this.TextBoxIdEspecialidad.Enabled = false;
             this.TextBoxIdEspecialidad.Location = new System.Drawing.Point(3, 3);
             this.TextBoxIdEspecialidad.Name = "TextBoxIdEspecialidad";
             this.TextBoxIdEspecialidad.Size = new System.Drawing.Size(50, 20);

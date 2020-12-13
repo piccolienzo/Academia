@@ -12,9 +12,9 @@ namespace Data.Database
 {
     public class PersonaAdapter : Adapter
     {
-        public List<Personas> GetAll()
+        public List<Persona> GetAll()
         {
-            List<Personas> personas = new List<Personas>();
+            List<Persona> personas = new List<Persona>();
             try
             {
                 
@@ -25,7 +25,7 @@ namespace Data.Database
 
                 while (drPersonas.Read())
                 {
-                    Personas per = new Personas
+                    Persona per = new Persona
                     {
                         ID = (int)drPersonas["id_persona"],
                         Nombre = (string)drPersonas["nombre"],
@@ -35,7 +35,7 @@ namespace Data.Database
                         Telefono = (string)drPersonas["telefono"],
                         FechaNacimiento = (DateTime)drPersonas["fecha_nac"],
                         Legajo = (int)drPersonas["legajo"],
-                        TipoPersona = ((Personas.TiposPersonas)(int)drPersonas["tipo_persona"]),
+                        TipoPersona = ((Persona.TiposPersonas)(int)drPersonas["tipo_persona"]),
                         IdPlan = (int)drPersonas["id_plan"]
 
 
@@ -56,9 +56,9 @@ namespace Data.Database
             
         }
 
-        public Personas GetOne(int ID)
+        public Persona GetOne(int ID)
         {
-            Personas per = new Personas();
+            Persona per = new Persona();
             try
             {
                 this.OpenConnection();
@@ -75,7 +75,7 @@ namespace Data.Database
                     per.Telefono = (string)drPersonas["telefono"];
                     per.FechaNacimiento = (DateTime)drPersonas["fecha_nac"];
                     per.Legajo = (int)drPersonas["legajo"];
-                    per.TipoPersona = ((Personas.TiposPersonas)(int)drPersonas["tipo_persona"]);
+                    per.TipoPersona = ((Persona.TiposPersonas)(int)drPersonas["tipo_persona"]);
                     per.IdPlan = (int)drPersonas["id_plan"];
                 }
                 drPersonas.Close();
@@ -110,7 +110,7 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
-        public void Update(Personas persona)
+        public void Update(Persona persona)
         {
             try
             {
@@ -140,7 +140,7 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
-        public void Insert(Personas persona)
+        public void Insert(Persona persona)
         {
             try
             {
@@ -171,7 +171,7 @@ namespace Data.Database
             }
         }
 
-        public void Save(Personas persona)
+        public void Save(Persona persona)
         {
             if (persona.State == BusinessEntity.States.Deleted)
             {

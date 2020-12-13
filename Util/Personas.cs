@@ -13,8 +13,8 @@ namespace Util
         public static List<TiposPersonas> GetTipoPersonas()
         {
             List<TiposPersonas> tp = new List<TiposPersonas>();
-            int[] valores = (int[])Enum.GetValues(typeof(Business.Entities.Personas.TiposPersonas));
-            string[] tipos = Enum.GetNames(typeof(Business.Entities.Personas.TiposPersonas));
+            int[] valores = (int[])Enum.GetValues(typeof(Business.Entities.Persona.TiposPersonas));
+            string[] tipos = Enum.GetNames(typeof(Business.Entities.Persona.TiposPersonas));
             for (int x=0;x<tipos.Length;x++)
             {
                 TiposPersonas tp2 = new TiposPersonas
@@ -50,13 +50,13 @@ namespace Util
 
 
 
-        public static List<Business.Entities.Personas> GetDocentes()
+        public static List<Business.Entities.Persona> GetDocentes()
         {
-            List<Business.Entities.Personas> personas = new Business.Logic.PersonaLogic().GetAll();
+            List<Business.Entities.Persona> personas = new Business.Logic.PersonaLogic().GetAll();
 
 
-            List<Business.Entities.Personas> docentes = (from docente in personas
-                                                         where docente.TipoPersona == Business.Entities.Personas.TiposPersonas.Docente
+            List<Business.Entities.Persona> docentes = (from docente in personas
+                                                         where docente.TipoPersona == Business.Entities.Persona.TiposPersonas.Docente
                                                          select docente
                                                          ).ToList();
             return docentes;

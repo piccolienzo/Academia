@@ -41,10 +41,10 @@ namespace UI.Desktop
             ComboComision.DisplayMember = "id";
             ComboComision.ValueMember = "id";
 
-            List<Business.Entities.Personas> ul = new PersonaLogic().GetAll();
+            List<Business.Entities.Persona> ul = new PersonaLogic().GetAll();
 
             ComboAlumno.DataSource = (from p in ul
-                                     where p.TipoPersona == Business.Entities.Personas.TiposPersonas.Alumno
+                                     where p.TipoPersona == Business.Entities.Persona.TiposPersonas.Alumno
                                      select p).ToList();
             ComboAlumno.DisplayMember = "legajo";
             ComboAlumno.ValueMember = "id";

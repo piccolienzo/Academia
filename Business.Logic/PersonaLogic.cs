@@ -17,17 +17,17 @@ namespace Business.Logic
             PersonaData = new PersonaAdapter();
         }
 
-        public Personas GetOne(int id)
+        public Persona GetOne(int id)
         {
             return PersonaData.GetOne(id);
         }
-        public List<Personas> GetAll()
+        public List<Persona> GetAll()
         {
             return PersonaData.GetAll();
         }
 
 
-        public void Save(Personas persona)
+        public void Save(Persona persona)
         {
             PersonaData.Save(persona);
         }

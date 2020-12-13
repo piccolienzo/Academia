@@ -109,7 +109,7 @@ namespace Util
             List<AlumnoInscripcion> alumnoInscripciones = AlumnoInscripcionLogic.GetAll();
             List < Curso > cursos = CursoLogic.GetAll();
             List<Comision> comisiones = ComisionLogic.GetAll();
-            List<Business.Entities.Personas> personas = PersonaLogic.GetAll();
+            List<Business.Entities.Persona> personas = PersonaLogic.GetAll();
             List<Materia> materias = MateriaLogic.GetAll();
 
 
@@ -142,7 +142,7 @@ namespace Util
         public List<InformePlanes> GetInformePlanes()
         {
             List<Comision> comisiones = ComisionLogic.GetAll();
-            List<Business.Entities.Personas> personas = PersonaLogic.GetAll();
+            List<Business.Entities.Persona> personas = PersonaLogic.GetAll();
             List<Especialidad> especialidades = EspecialidadLogic.GetAll();
             List<Plan> planes = PlanLogic.GetAll();
 
@@ -152,7 +152,7 @@ namespace Util
                 join comision in comisiones on plan.ID equals comision.IdPlan
                 join persona in personas on plan.ID equals persona.IdPlan
 
-                where persona.TipoPersona == Business.Entities.Personas.TiposPersonas.Alumno
+                where persona.TipoPersona == Business.Entities.Persona.TiposPersonas.Alumno
                 
                
                
@@ -180,7 +180,7 @@ namespace Util
             List<AlumnoInscripcion> alumnoInscripciones = AlumnoInscripcionLogic.GetAll();
             List<Curso> cursos = CursoLogic.GetAll();
             List<Comision> comisiones = ComisionLogic.GetAll();
-            List<Business.Entities.Personas> personas = PersonaLogic.GetAll();
+            List<Business.Entities.Persona> personas = PersonaLogic.GetAll();
             List<Materia> materias = MateriaLogic.GetAll();
 
             List<InformeCursos> x = (
