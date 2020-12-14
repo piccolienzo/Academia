@@ -110,7 +110,7 @@ namespace Data.Database
                 SqlCommand cmdUpdate = new SqlCommand("UPDATE docentes_cursos SET  id_curso=@idcurso, id_docente=@iddocente, " +
                     "cargo=@cargo WHERE id_dictado=@id", SqlConn);
 
-
+                cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = docenteCurso.ID;
                 cmdUpdate.Parameters.Add("@idcurso", SqlDbType.Int).Value = docenteCurso.IdCurso;
                 cmdUpdate.Parameters.Add("@iddocente", SqlDbType.Int).Value = docenteCurso.IdDocente;
                 cmdUpdate.Parameters.Add("@cargo", SqlDbType.Int).Value = docenteCurso.Cargo;
@@ -132,7 +132,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInsert = new SqlCommand("insert into docente_cursos(id_curso,id_docente,cargo) " +
+                SqlCommand cmdInsert = new SqlCommand("insert into docentes_cursos(id_curso,id_docente,cargo) " +
                     "values(@idcurso,@iddocente,@cargo) " +
                     "select @@identity", SqlConn);
 

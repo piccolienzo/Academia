@@ -40,6 +40,7 @@ namespace UI.Desktop
             this.textBoxIdCurso.Text = this.DocenteCursoActual.IdCurso.ToString();
             this.textBoxIdDocente.Text = this.DocenteCursoActual.IdDocente.ToString();
             this.textBoxCargo.Text = this.DocenteCursoActual.Cargo.ToString();
+            
 
 
             if (this.Modo == ModoForm.Baja)
@@ -68,16 +69,19 @@ namespace UI.Desktop
                 
                 this.DocenteCursoActual.IdCurso = Convert.ToInt32(this.textBoxIdCurso.Text);
                 this.DocenteCursoActual.IdDocente = Convert.ToInt32(this.textBoxIdDocente.Text);
-                //this.DocenteCursoActual.Cargo = Convert.ToInt32(this.textBoxCargo.Text);
+                this.DocenteCursoActual.Cargo = (DocenteCurso.TiposCargos)(int)comboBoxCargo.SelectedValue;
+
+                
 
 
 
             }
             else if (this.Modo == ModoForm.Modificacion)
-            {/*
-                this.TextBoxIdEspecialidad.Enabled = false;
-                this.PlanActual.Descripcion = this.TextBoxDescripcion.Text;
-*/
+            {
+                this.DocenteCursoActual.IdCurso = Convert.ToInt32(this.textBoxIdCurso.Text);
+                this.DocenteCursoActual.IdDocente = Convert.ToInt32(this.textBoxIdDocente.Text);
+                this.DocenteCursoActual.Cargo = (DocenteCurso.TiposCargos)(int)comboBoxCargo.SelectedValue;
+
             }
 
             switch (this.Modo)
@@ -122,9 +126,14 @@ namespace UI.Desktop
             CursoLogic cursoLogic = new CursoLogic();
 
             this.comboBoxIdCurso.DataSource = cursoLogic.GetAll();
+            this.comboBoxCargo.DisplayMember = "id";
             this.comboBoxIdCurso.ValueMember = "id";
 
-            this.comboBoxCargo.DataSource = Util.Personas.GetTipoPersonas();
+            this.comboBoxIdDocente.DataSource = Util.Personas.GetDocentes();
+            this.comboBoxIdDocente.DisplayMember = "Apellido";
+            this.comboBoxIdDocente.ValueMember = "ID";
+
+            this.comboBoxCargo.DataSource = Util.Personas.GetTipoCargos();
             this.comboBoxCargo.DisplayMember = "Nombre";
             this.comboBoxCargo.ValueMember = "Numero";
 
@@ -136,13 +145,18 @@ namespace UI.Desktop
             this.textBoxIdCurso.Text = (string)this.comboBoxIdCurso.SelectedValue.ToString();
         }
 
-        
+        private void ComboBoxIdDocente_SelectedValueChanged(object sender, EventArgs e)
+        {
+            this.textBoxIdDocente.Text = (string)this.comboBoxIdDocente.SelectedValue.ToString();
+        }
+
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
             if (this.Validar())
             {
                 this.GuardarCambios();
+                this.Close();
             }
         }
 

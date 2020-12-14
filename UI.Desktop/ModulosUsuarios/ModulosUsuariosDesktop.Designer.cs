@@ -37,8 +37,6 @@
             this.TextBoxIDModulo = new System.Windows.Forms.TextBox();
             this.ComboIDModulo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.BotonAceptar = new UI.Desktop.CicButton();
-            this.BotonCancelar = new UI.Desktop.CicButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.TextBoxIDUsuario = new System.Windows.Forms.TextBox();
             this.ComboIDUsuario = new System.Windows.Forms.ComboBox();
@@ -50,6 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TextBoxID = new System.Windows.Forms.TextBox();
             this.CheckAlta = new System.Windows.Forms.CheckBox();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -59,8 +59,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.CheckConsulta, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.CheckModificacion, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.CheckBaja, 1, 4);
@@ -76,48 +76,49 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.TextBoxID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.CheckAlta, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(110, 12);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(571, 412);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(306, 259);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // CheckConsulta
             // 
             this.CheckConsulta.AutoSize = true;
-            this.CheckConsulta.Location = new System.Drawing.Point(288, 316);
+            this.CheckConsulta.Location = new System.Drawing.Point(103, 171);
             this.CheckConsulta.Name = "CheckConsulta";
-            this.CheckConsulta.Size = new System.Drawing.Size(80, 17);
+            this.CheckConsulta.Size = new System.Drawing.Size(64, 17);
             this.CheckConsulta.TabIndex = 13;
-            this.CheckConsulta.Text = "checkBox4";
+            this.CheckConsulta.Text = "Habilitar";
             this.CheckConsulta.UseVisualStyleBackColor = true;
             // 
             // CheckModificacion
             // 
             this.CheckModificacion.AutoSize = true;
-            this.CheckModificacion.Location = new System.Drawing.Point(288, 271);
+            this.CheckModificacion.Location = new System.Drawing.Point(103, 145);
             this.CheckModificacion.Name = "CheckModificacion";
-            this.CheckModificacion.Size = new System.Drawing.Size(80, 17);
+            this.CheckModificacion.Size = new System.Drawing.Size(64, 17);
             this.CheckModificacion.TabIndex = 12;
-            this.CheckModificacion.Text = "checkBox3";
+            this.CheckModificacion.Text = "Habilitar";
             this.CheckModificacion.UseVisualStyleBackColor = true;
             // 
             // CheckBaja
             // 
             this.CheckBaja.AutoSize = true;
-            this.CheckBaja.Location = new System.Drawing.Point(288, 216);
+            this.CheckBaja.Location = new System.Drawing.Point(103, 122);
             this.CheckBaja.Name = "CheckBaja";
-            this.CheckBaja.Size = new System.Drawing.Size(80, 17);
+            this.CheckBaja.Size = new System.Drawing.Size(64, 17);
             this.CheckBaja.TabIndex = 11;
-            this.CheckBaja.Text = "checkBox2";
+            this.CheckBaja.Text = "Habilitar";
             this.CheckBaja.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -136,11 +137,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.TextBoxIDModulo, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.ComboIDModulo, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(288, 119);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(103, 64);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(200, 50);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(200, 29);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // TextBoxIDModulo
@@ -165,46 +166,14 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.BotonAceptar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.BotonCancelar, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(288, 358);
+            this.tableLayoutPanel2.Controls.Add(this.BotonAceptar, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(103, 194);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 51);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(197, 32);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // BotonAceptar
-            // 
-            this.BotonAceptar.BorderColor = System.Drawing.Color.Silver;
-            this.BotonAceptar.ButtonColor = System.Drawing.Color.Red;
-            this.BotonAceptar.Location = new System.Drawing.Point(103, 3);
-            this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.BotonAceptar.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.BotonAceptar.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.BotonAceptar.Size = new System.Drawing.Size(75, 23);
-            this.BotonAceptar.TabIndex = 0;
-            this.BotonAceptar.Text = "Aceptar";
-            this.BotonAceptar.TextColor = System.Drawing.Color.White;
-            this.BotonAceptar.UseVisualStyleBackColor = true;
-            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
-            // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.BorderColor = System.Drawing.Color.Silver;
-            this.BotonCancelar.ButtonColor = System.Drawing.Color.Red;
-            this.BotonCancelar.Location = new System.Drawing.Point(3, 3);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.BotonCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.BotonCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.BotonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.BotonCancelar.TabIndex = 1;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.TextColor = System.Drawing.Color.White;
-            this.BotonCancelar.UseVisualStyleBackColor = true;
-            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -213,11 +182,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.TextBoxIDUsuario, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.ComboIDUsuario, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(288, 61);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(103, 29);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 51);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 29);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // TextBoxIDUsuario
@@ -240,7 +209,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 2;
@@ -249,7 +218,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 116);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 3;
@@ -258,7 +227,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 172);
+            this.label4.Location = new System.Drawing.Point(3, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 5;
@@ -267,7 +236,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 213);
+            this.label5.Location = new System.Drawing.Point(3, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 6;
@@ -276,16 +245,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 268);
+            this.label6.Location = new System.Drawing.Point(3, 142);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 13);
+            this.label6.Size = new System.Drawing.Size(67, 26);
             this.label6.TabIndex = 7;
             this.label6.Text = "Permite Modificacion";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 313);
+            this.label7.Location = new System.Drawing.Point(3, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 13);
             this.label7.TabIndex = 8;
@@ -294,7 +263,7 @@
             // TextBoxID
             // 
             this.TextBoxID.Enabled = false;
-            this.TextBoxID.Location = new System.Drawing.Point(288, 3);
+            this.TextBoxID.Location = new System.Drawing.Point(103, 3);
             this.TextBoxID.Name = "TextBoxID";
             this.TextBoxID.Size = new System.Drawing.Size(100, 20);
             this.TextBoxID.TabIndex = 9;
@@ -302,19 +271,39 @@
             // CheckAlta
             // 
             this.CheckAlta.AutoSize = true;
-            this.CheckAlta.Location = new System.Drawing.Point(288, 175);
+            this.CheckAlta.Location = new System.Drawing.Point(103, 99);
             this.CheckAlta.Name = "CheckAlta";
-            this.CheckAlta.Size = new System.Drawing.Size(80, 17);
+            this.CheckAlta.Size = new System.Drawing.Size(64, 17);
             this.CheckAlta.TabIndex = 10;
-            this.CheckAlta.Text = "checkBox1";
+            this.CheckAlta.Text = "Habilitar";
             this.CheckAlta.UseVisualStyleBackColor = true;
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.Location = new System.Drawing.Point(3, 3);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BotonCancelar.TabIndex = 14;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
+            // 
+            // BotonAceptar
+            // 
+            this.BotonAceptar.Location = new System.Drawing.Point(101, 3);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(75, 23);
+            this.BotonAceptar.TabIndex = 14;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // ModulosUsuariosDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(306, 229);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ModulosUsuariosDesktop";
             this.Text = "ModulosUsuariosDesktop";
@@ -341,7 +330,6 @@
         private System.Windows.Forms.TextBox TextBoxIDModulo;
         private System.Windows.Forms.ComboBox ComboIDModulo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private CicButton BotonAceptar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox TextBoxIDUsuario;
         private System.Windows.Forms.ComboBox ComboIDUsuario;
@@ -353,6 +341,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TextBoxID;
         private System.Windows.Forms.CheckBox CheckAlta;
-        private CicButton BotonCancelar;
+        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonAceptar;
     }
 }

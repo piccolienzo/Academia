@@ -4,10 +4,10 @@
 
 
 
-*Terminar abms escritorio que faltan: Personas. Docentes (Revisar validaciones de los demas)
+*Revisar validaciones escritorio
 
 
 *agregar validaciones web : Docentes cursos
 *Terminar ABM web: Docentes
 
-
+Ultima version : 1.9

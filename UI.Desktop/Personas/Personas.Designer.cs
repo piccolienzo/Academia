@@ -35,6 +35,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataGridViewPersonas = new System.Windows.Forms.DataGridView();
+            this.BotonModificar = new UI.Desktop.CicButton();
+            this.BotonBorrar = new UI.Desktop.CicButton();
+            this.BotonActualizar = new UI.Desktop.CicButton();
+            this.BotonAgregar = new UI.Desktop.CicButton();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +46,7 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BotonModificar = new UI.Desktop.CicButton();
-            this.BotonBorrar = new UI.Desktop.CicButton();
-            this.BotonActualizar = new UI.Desktop.CicButton();
-            this.BotonAgregar = new UI.Desktop.CicButton();
+            this.tipoPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,8 @@
             this.usuario,
             this.email,
             this.telefono,
-            this.fechaNac});
+            this.fechaNac,
+            this.tipoPersona});
             this.DataGridViewPersonas.Dock = System.Windows.Forms.DockStyle.Top;
             this.DataGridViewPersonas.GridColor = System.Drawing.Color.White;
             this.DataGridViewPersonas.Location = new System.Drawing.Point(0, 0);
@@ -82,84 +84,6 @@
             this.DataGridViewPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewPersonas.Size = new System.Drawing.Size(871, 516);
             this.DataGridViewPersonas.TabIndex = 1;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.id.HeaderText = "ID Persona";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // apellido
-            // 
-            this.apellido.DataPropertyName = "apellido";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.apellido.DefaultCellStyle = dataGridViewCellStyle4;
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            // 
-            // usuario
-            // 
-            this.usuario.DataPropertyName = "direccion";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = "No contiene";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.usuario.DefaultCellStyle = dataGridViewCellStyle5;
-            this.usuario.HeaderText = "Direccion";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Width = 120;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.NullValue = "No contiene";
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.email.DefaultCellStyle = dataGridViewCellStyle6;
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 120;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // fechaNac
-            // 
-            this.fechaNac.DataPropertyName = "fechaNacimiento";
-            this.fechaNac.HeaderText = "Fecha de Nacimiento";
-            this.fechaNac.Name = "fechaNac";
-            this.fechaNac.ReadOnly = true;
             // 
             // BotonModificar
             // 
@@ -249,6 +173,91 @@
             this.BotonAgregar.UseVisualStyleBackColor = true;
             this.BotonAgregar.Click += new System.EventHandler(this.BotonAgregar_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.id.HeaderText = "ID Persona";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.DataPropertyName = "apellido";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.apellido.DefaultCellStyle = dataGridViewCellStyle4;
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // usuario
+            // 
+            this.usuario.DataPropertyName = "direccion";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.NullValue = "No contiene";
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.usuario.DefaultCellStyle = dataGridViewCellStyle5;
+            this.usuario.HeaderText = "Direccion";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Width = 120;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.NullValue = "No contiene";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.email.DefaultCellStyle = dataGridViewCellStyle6;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 120;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // fechaNac
+            // 
+            this.fechaNac.DataPropertyName = "fechaNacimiento";
+            this.fechaNac.HeaderText = "Fecha de Nacimiento";
+            this.fechaNac.Name = "fechaNac";
+            this.fechaNac.ReadOnly = true;
+            // 
+            // tipoPersona
+            // 
+            this.tipoPersona.DataPropertyName = "tipoPersona";
+            this.tipoPersona.HeaderText = "Tipo Persona";
+            this.tipoPersona.Name = "tipoPersona";
+            this.tipoPersona.ReadOnly = true;
+            // 
             // Personas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -281,5 +290,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoPersona;
     }
 }

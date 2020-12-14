@@ -35,13 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxIdDictado = new System.Windows.Forms.TextBox();
             this.textBoxIdCurso = new System.Windows.Forms.TextBox();
-            this.textBoxIdDocente = new System.Windows.Forms.TextBox();
             this.textBoxCargo = new System.Windows.Forms.TextBox();
             this.comboBoxIdCurso = new System.Windows.Forms.ComboBox();
             this.comboBoxIdDocente = new System.Windows.Forms.ComboBox();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
+            this.textBoxIdDocente = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,14 +127,6 @@
             this.textBoxIdCurso.Size = new System.Drawing.Size(100, 20);
             this.textBoxIdCurso.TabIndex = 6;
             // 
-            // textBoxIdDocente
-            // 
-            this.textBoxIdDocente.Enabled = false;
-            this.textBoxIdDocente.Location = new System.Drawing.Point(148, 56);
-            this.textBoxIdDocente.Name = "textBoxIdDocente";
-            this.textBoxIdDocente.Size = new System.Drawing.Size(100, 20);
-            this.textBoxIdDocente.TabIndex = 7;
-            // 
             // textBoxCargo
             // 
             this.textBoxCargo.Enabled = false;
@@ -159,6 +151,7 @@
             this.comboBoxIdDocente.Name = "comboBoxIdDocente";
             this.comboBoxIdDocente.Size = new System.Drawing.Size(121, 21);
             this.comboBoxIdDocente.TabIndex = 10;
+            this.comboBoxIdDocente.SelectedValueChanged += new System.EventHandler(this.ComboBoxIdDocente_SelectedValueChanged);
             // 
             // comboBoxCargo
             // 
@@ -188,6 +181,14 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
+            // textBoxIdDocente
+            // 
+            this.textBoxIdDocente.Enabled = false;
+            this.textBoxIdDocente.Location = new System.Drawing.Point(148, 56);
+            this.textBoxIdDocente.Name = "textBoxIdDocente";
+            this.textBoxIdDocente.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdDocente.TabIndex = 7;
+            // 
             // DocentesCursosDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,12 +213,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxIdDictado;
         private System.Windows.Forms.TextBox textBoxIdCurso;
-        private System.Windows.Forms.TextBox textBoxIdDocente;
         private System.Windows.Forms.TextBox textBoxCargo;
         private System.Windows.Forms.ComboBox comboBoxIdCurso;
         private System.Windows.Forms.ComboBox comboBoxIdDocente;
         private System.Windows.Forms.ComboBox comboBoxCargo;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.TextBox textBoxIdDocente;
     }
 }

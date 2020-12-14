@@ -181,7 +181,7 @@
             // 
             // desc_plan
             // 
-            this.desc_plan.DataPropertyName = "descripcion";
+            this.desc_plan.DataPropertyName = "idcurso";
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
@@ -194,7 +194,7 @@
             // 
             // idEsp
             // 
-            this.idEsp.DataPropertyName = "idespecialidad";
+            this.idEsp.DataPropertyName = "iddocente";
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
@@ -207,6 +207,7 @@
             // 
             // cargo
             // 
+            this.cargo.DataPropertyName = "cargo";
             this.cargo.HeaderText = "Cargo";
             this.cargo.Name = "cargo";
             this.cargo.ReadOnly = true;

@@ -58,8 +58,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 5);
@@ -71,16 +71,17 @@
             this.tableLayoutPanel1.Controls.Add(this.TextBoxId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.TextBoxNota, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.TextBoxCondicion, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(115, 19);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(571, 412);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 210);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label3
@@ -88,9 +89,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.label3.Text = "ID Inscripcion";
             // 
             // tableLayoutPanel4
             // 
@@ -99,7 +100,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.TextBoxIdComision, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.ComboComision, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(288, 205);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(153, 70);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -130,19 +131,19 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.BotonCancelar, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.BotonAceptar, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(288, 357);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(153, 178);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 51);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(202, 26);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // BotonCancelar
             // 
             this.BotonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BotonCancelar.Location = new System.Drawing.Point(103, 25);
+            this.BotonCancelar.Location = new System.Drawing.Point(104, 3);
             this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BotonCancelar.Size = new System.Drawing.Size(75, 20);
             this.BotonCancelar.TabIndex = 10;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
@@ -151,9 +152,9 @@
             // BotonAceptar
             // 
             this.BotonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BotonAceptar.Location = new System.Drawing.Point(22, 25);
+            this.BotonAceptar.Location = new System.Drawing.Point(23, 3);
             this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.Size = new System.Drawing.Size(75, 23);
+            this.BotonAceptar.Size = new System.Drawing.Size(75, 20);
             this.BotonAceptar.TabIndex = 9;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
@@ -166,11 +167,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.TextBoxIdAlumno, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.ComboAlumno, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(288, 104);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(153, 29);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 51);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 35);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // TextBoxIdAlumno
@@ -193,42 +194,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 101);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Alumno";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 202);
+            this.label2.Location = new System.Drawing.Point(3, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.label2.Text = "Comision";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 258);
+            this.label4.Location = new System.Drawing.Point(3, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.label4.Text = "Nota";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 299);
+            this.label5.Location = new System.Drawing.Point(3, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.label5.Text = "Condicion";
             // 
             // TextBoxId
             // 
-            this.TextBoxId.Location = new System.Drawing.Point(288, 3);
+            this.TextBoxId.Location = new System.Drawing.Point(153, 3);
             this.TextBoxId.Name = "TextBoxId";
             this.TextBoxId.ReadOnly = true;
             this.TextBoxId.Size = new System.Drawing.Size(100, 20);
@@ -236,7 +237,7 @@
             // 
             // TextBoxNota
             // 
-            this.TextBoxNota.Location = new System.Drawing.Point(288, 261);
+            this.TextBoxNota.Location = new System.Drawing.Point(153, 126);
             this.TextBoxNota.MaxLength = 2;
             this.TextBoxNota.Name = "TextBoxNota";
             this.TextBoxNota.Size = new System.Drawing.Size(100, 20);
@@ -247,7 +248,7 @@
             // 
             // TextBoxCondicion
             // 
-            this.TextBoxCondicion.Location = new System.Drawing.Point(288, 302);
+            this.TextBoxCondicion.Location = new System.Drawing.Point(153, 152);
             this.TextBoxCondicion.Name = "TextBoxCondicion";
             this.TextBoxCondicion.Size = new System.Drawing.Size(100, 20);
             this.TextBoxCondicion.TabIndex = 11;
@@ -264,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(358, 215);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AlumnosInscripcionesDesktop";
             this.Text = "AlumnosInscripcionesDesktop";

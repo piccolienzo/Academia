@@ -151,10 +151,12 @@ namespace UI.Desktop
             this.comboBoxPlanes.DisplayMember = "descripcion";
             this.comboBoxPlanes.ValueMember = "id";
 
-            
-            
-            this.comboBoxTipoPersona.DataSource = Enum.GetValues(typeof(Persona.TiposPersonas));
-            
+
+
+            this.comboBoxTipoPersona.DataSource = Util.Personas.GetTipoPersonas();
+            this.comboBoxTipoPersona.DisplayMember = "Nombre";
+            this.comboBoxTipoPersona.ValueMember = "Numero";
+
 
 
 
