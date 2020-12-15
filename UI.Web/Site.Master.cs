@@ -72,7 +72,7 @@ namespace UI.Web
 
         protected void LinkDocentesCursos_Click(object sender, EventArgs e)
         {
-
+            Page.Response.Redirect("~/DocentesCursos.aspx");
         }
 
         protected void LinkModulosUsuarios_Click(object sender, EventArgs e)
@@ -88,6 +88,11 @@ namespace UI.Web
         protected void LinkNav_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void LinkReportes_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/Reportes.aspx");
         }
 
         //public void UnactiveAll()

@@ -16,5 +16,10 @@ namespace UI.Web
             ReportViewer1.LocalReport.DisplayName = $"ReporteNotas{asd}";
             
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/Reportes.aspx");
+        }
     }
 }

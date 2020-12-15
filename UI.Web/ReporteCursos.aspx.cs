@@ -14,5 +14,10 @@ namespace UI.Web
             string asd = DateTime.Now.ToString("dd-MM-yyyy-HHmm");
             ReportViewer1.LocalReport.DisplayName = $"ReporteCursos{asd}";
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/Reportes.aspx");
+        }
     }
 }

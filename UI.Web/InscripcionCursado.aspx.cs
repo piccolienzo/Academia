@@ -43,9 +43,9 @@ namespace UI.Web
             lnk.CssClass = "nav-link active";
 
             Usuario usuario = (Usuario)Session["Usuario"];
-            Business.Entities.Personas persona = new PersonaLogic().GetOne((int)usuario.Id_Persona);
+            Business.Entities.Persona persona = new PersonaLogic().GetOne((int)usuario.Id_Persona);
 
-            if ((int)persona.TipoPersona != ((int)Business.Entities.Personas.TiposPersonas.Alumno))
+            if ((int)persona.TipoPersona != ((int)Business.Entities.Persona.TiposPersonas.Alumno))
             {
                 Page.Response.Redirect("~/Home.aspx");
             }

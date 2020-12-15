@@ -12,7 +12,7 @@ namespace UI.Web
 {
     public partial class Personas : System.Web.UI.Page
     {
-        public Business.Entities.Personas Entity { get; set; }
+        public Business.Entities.Persona Entity { get; set; }
         private PersonaLogic personaLogic;
         protected PersonaLogic PersonaLogic
         {
@@ -99,7 +99,7 @@ namespace UI.Web
             TextBoxLegajo.Text = Entity.Legajo.ToString();
         }
 
-        protected void MapearAEntidad(Business.Entities.Personas persona)
+        protected void MapearAEntidad(Business.Entities.Persona persona)
         {
             persona.Apellido = TextBoxApellido.Text;
             persona.Direccion = TextBoxDireccion.Text;
@@ -112,8 +112,8 @@ namespace UI.Web
             persona.Legajo = Convert.ToInt32(TextBoxLegajo.Text);
             persona.Nombre = TextBoxNombre.Text;
             persona.Telefono = TextBoxTelefono.Text;
-            persona.TipoPersona = (Business.Entities.Personas.TiposPersonas)
-                Enum.Parse(typeof(Business.Entities.Personas.TiposPersonas), 
+            persona.TipoPersona = (Business.Entities.Persona.TiposPersonas)
+                Enum.Parse(typeof(Business.Entities.Persona.TiposPersonas), 
                 DropDownTipoPersona.SelectedValue, true);
             
 
@@ -137,7 +137,7 @@ namespace UI.Web
             DropDownIdPlan.SelectedIndex = -1;
         }
 
-        protected void Guardar(Business.Entities.Personas persona, BusinessEntity.States estado, int? id)
+        protected void Guardar(Business.Entities.Persona persona, BusinessEntity.States estado, int? id)
         {
             if (id != null)
             {
@@ -153,18 +153,18 @@ namespace UI.Web
             switch (FormMode)
             {
                 case FormModes.Alta:
-                    Entity = new Business.Entities.Personas();
+                    Entity = new Business.Entities.Persona();
                     MapearAEntidad(Entity);
                     Guardar(Entity, BusinessEntity.States.New, null);
                     LoadGrid();
                     break;
                 case FormModes.Baja:
-                    Entity = new Business.Entities.Personas();
+                    Entity = new Business.Entities.Persona();
                     Guardar(Entity, BusinessEntity.States.Deleted, SelectedID);
                     LoadGrid();
                     break;
                 case FormModes.Modificacion:
-                    Entity = new Business.Entities.Personas();
+                    Entity = new Business.Entities.Persona();
                     MapearAEntidad(Entity);
                     Guardar(Entity, BusinessEntity.States.Modified, SelectedID);
                     LoadGrid();

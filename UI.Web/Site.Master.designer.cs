@@ -60,13 +60,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.LinkButton HomeLinkNav;
 
         /// <summary>
-        /// Control LinkNav.
+        /// Control LinkNotas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkNav;
+        protected global::System.Web.UI.WebControls.LinkButton LinkNotas;
 
         /// <summary>
         /// Control LinkComisiones.
@@ -184,6 +184,24 @@ namespace UI.Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkInscripCursado;
+
+        /// <summary>
+        /// Control Li2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li2;
+
+        /// <summary>
+        /// Control LinkReportes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkReportes;
 
         /// <summary>
         /// Control UsuarioOpciones.
