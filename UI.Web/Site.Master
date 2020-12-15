@@ -13,6 +13,7 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
         <style>
+
         .centered-text{
    			text-align:center;
    		}
@@ -53,44 +54,47 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item" runat="server">
-                  <asp:LinkButton ID="LinkNav" runat="server" OnClick="LinkNav_Click" CssClass="nav-link">AlumnosInscripciones</asp:LinkButton>
+                  <asp:LinkButton ID="LinkNotas" runat="server" OnClick="LinkNav_Click" CssClass="nav-link" Font-Size="Large">Registrar Notas</asp:LinkButton>
               </li>
               <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkComisiones" runat="server" OnClick="LinkComisiones_Click" CssClass="nav-link">Comisiones</asp:LinkButton>
+                <asp:LinkButton ID="LinkComisiones" runat="server" OnClick="LinkComisiones_Click" CssClass="nav-link" Font-Size="Large">Comisiones</asp:LinkButton>
               </li>
               <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkCursos" runat="server" OnClick="LinkCursos_Click" CssClass="nav-link">Cursos</asp:LinkButton>
+                <asp:LinkButton ID="LinkCursos" runat="server" OnClick="LinkCursos_Click" CssClass="nav-link" Font-Size="Large">Cursos</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkDocentesCursos" OnClick="LinkDocentesCursos_Click" runat="server" CssClass="nav-link">Docentes-Cursos</asp:LinkButton>
+                <asp:LinkButton ID="LinkDocentesCursos" OnClick="LinkDocentesCursos_Click" runat="server" CssClass="nav-link" Font-Size="Large">Docentes-Cursos</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkEspecialidades" OnClick="LinkEspecialidades_Click" runat="server" CssClass="nav-link">Especialidades</asp:LinkButton>
+                <asp:LinkButton ID="LinkEspecialidades" OnClick="LinkEspecialidades_Click" runat="server" CssClass="nav-link" Font-Size="Large">Especialidades</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkMaterias" runat="server" OnClick="LinkMaterias_Click" CssClass="nav-link">Materias</asp:LinkButton>
+                <asp:LinkButton ID="LinkMaterias" runat="server" OnClick="LinkMaterias_Click" CssClass="nav-link" Font-Size="Large">Materias</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkModulos" runat="server" OnClick="LinkModulos_Click" CssClass="nav-link">Modulos</asp:LinkButton>
+                <asp:LinkButton ID="LinkModulos" runat="server" OnClick="LinkModulos_Click" CssClass="nav-link" Font-Size="Large">Modulos</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkModulosUsuarios" OnClick="LinkModulosUsuarios_Click" runat="server" CssClass="nav-link">Modulos-Usuarios</asp:LinkButton>
+                <asp:LinkButton ID="LinkModulosUsuarios" OnClick="LinkModulosUsuarios_Click" runat="server" CssClass="nav-link" Font-Size="Large">Modulos-Usuarios</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkPersonas" runat="server" OnClick="LinkPersonas_Click" CssClass="nav-link">Personas</asp:LinkButton>
+                <asp:LinkButton ID="LinkPersonas" runat="server" OnClick="LinkPersonas_Click" CssClass="nav-link" Font-Size="Large">Personas</asp:LinkButton>
               </li>
                 <li class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkPlanes" runat="server" OnClick="LinkPlanes_Click" CssClass="nav-link">Planes</asp:LinkButton>
+                <asp:LinkButton ID="LinkPlanes" runat="server" OnClick="LinkPlanes_Click" CssClass="nav-link" Font-Size="Large">Planes</asp:LinkButton>
               </li>
                 <li id="LiLinkUsuarios"  class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkUsuarios" runat="server" OnClick="LinkUsuarios_Click" CssClass="nav-link">Usuarios</asp:LinkButton>
+                <asp:LinkButton ID="LinkUsuarios" runat="server" OnClick="LinkUsuarios_Click" CssClass="nav-link" Font-Size="Large">Usuarios</asp:LinkButton>
               </li>
               <li id="Li1"  class="nav-item" runat="server">
-                <asp:LinkButton ID="LinkInscripCursado" runat="server" OnClick="BotonInscripCursado_Click" CssClass="nav-link">Inscricion Cursado</asp:LinkButton>
+                <asp:LinkButton ID="LinkInscripCursado" runat="server" OnClick="BotonInscripCursado_Click" CssClass="nav-link" Font-Size="Large">Inscricion Cursado</asp:LinkButton>
+              </li>
+                <li id="Li2"  class="nav-item" runat="server">
+                <asp:LinkButton ID="LinkReportes" runat="server" OnClick="LinkReportes_Click" CssClass="nav-link" Font-Size="Large">Reportes</asp:LinkButton>
               </li>
 
               <li class="nav-item dropdown">               
-                  <asp:LinkButton ID="UsuarioOpciones" runat="server" CssClass="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuario</asp:LinkButton>
+                  <asp:LinkButton ID="UsuarioOpciones" runat="server" CssClass="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" Font-Size="Large">Usuario</asp:LinkButton>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <asp:LinkButton ID="BotonAjustesUsuario" runat="server" CssClass="dropdown-item">Ajustes de Usuario</asp:LinkButton>
                     <asp:LinkButton ID="BotonLogOut" OnClick="BotonLogOut_Click" runat="server" CssClass="dropdown-item">Log Out</asp:LinkButton>
@@ -109,8 +113,6 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
-    <footer class="centered-content centered-text">
-        <h5>Piccoli - Ceschan</h5>
-    </footer>
+   
 </body>
 </html>

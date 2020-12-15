@@ -13,5 +13,20 @@ namespace UI.Web
         {
 
         }
+
+        protected void BotonNotas_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/ReporteNotas.aspx");
+        }
+
+        protected void BotonCursos_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/ReporteCursos.aspx");
+        }
+
+        protected void BotonPlanes_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect("~/ReportePlanes.aspx");
+        }
     }
 }
