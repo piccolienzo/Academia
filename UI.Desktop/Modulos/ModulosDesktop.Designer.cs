@@ -97,6 +97,7 @@
             // 
             // TextBoxID
             // 
+            this.TextBoxID.Enabled = false;
             this.TextBoxID.Location = new System.Drawing.Point(85, 3);
             this.TextBoxID.Name = "TextBoxID";
             this.TextBoxID.Size = new System.Drawing.Size(100, 20);

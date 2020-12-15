@@ -147,7 +147,7 @@ namespace UI.Desktop
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                if (this.Continuar(this.BotonAceptar.Text, "Comisión"))
+                if (this.Continuar(this.BotonAceptar.Text, "Curso"))
                 {
                     Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
                     , MessageBoxIcon.Information);

@@ -126,20 +126,28 @@ namespace UI.Desktop
         }
         private new bool Validar()
         {
-            if (this.Continuar(this.BotonAceptar.Text, "Modulos usuario"))
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
+                if (this.Continuar(this.BotonAceptar.Text, "Inscripcion alumno"))
+                {
+                    Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
                     , MessageBoxIcon.Information);
-                return true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
+                Notificar("Error", "Existen errores, porfavor verificar el formulario", MessageBoxButtons.OK
+                , MessageBoxIcon.Error);
                 return false;
-
             }
         }
 
-
+        #region Validaciones
         private void AlumnosInscripcionesDesktop_Load(object sender, EventArgs e)
         {
             this.Text = this.Modo.ToString();
@@ -159,12 +167,12 @@ namespace UI.Desktop
             this.Close();
         }
 
-        private void ComboComision_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboComision_SelectedValueChanged(object sender, EventArgs e)
         {
             TextBoxIdComision.Text = ComboComision.SelectedValue.ToString();
         }
 
-        private void ComboAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboAlumno_SelectedValueChanged(object sender, EventArgs e)
         {
             TextBoxIdAlumno.Text = ComboAlumno.SelectedValue.ToString();
         }
@@ -177,14 +185,20 @@ namespace UI.Desktop
                 e.Cancel = true;
                 errorProvider1.SetError(t, "No debe estar en blanco");
             }
-            if ( ! int.TryParse(t.Text,out _))
+            if (int.TryParse(t.Text, out int i) == false)
             {
                 e.Cancel = true;
-                errorProvider1.SetError(t, "No debe estar en blanco");
+                errorProvider1.SetError(t, "Debe ser un numero ");
             }
         }
 
-        private void TextBoxCondicion_Validating(object sender, CancelEventArgs e)
+        private void TextBoxNota_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxDescripcion_Validating(object sender, CancelEventArgs e)
         {
             TextBox t = (TextBox)sender;
             if (t.Text == "")
@@ -194,10 +208,44 @@ namespace UI.Desktop
             }
         }
 
-        private void TextBoxNota_Validated(object sender, EventArgs e)
+        private void TextBoxDescripcion_Validated(object sender, EventArgs e)
         {
             TextBox t = (TextBox)sender;
             errorProvider1.SetError(t, "");
         }
+
+        private void TextBoxAlumno_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "Debe seleccionar un alumno");
+            }
+        }
+
+        private void TextBoxAlumno_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxComision_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "Debe seleccionar una comision");
+            }
+        }
+
+        private void TextBoxComision_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+# endregion
     }
 }

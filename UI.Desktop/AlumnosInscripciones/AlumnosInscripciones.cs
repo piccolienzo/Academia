@@ -42,7 +42,7 @@ namespace UI.Desktop
             { }
             else
             {
-                int id = ((Business.Entities.Usuario)this.DataGridViewInscripciones.SelectedRows[0].DataBoundItem).ID;
+                int id = ((AlumnoInscripcion)this.DataGridViewInscripciones.SelectedRows[0].DataBoundItem).ID;
                 AlumnosInscripcionesDesktop usuarioDesktop = new AlumnosInscripcionesDesktop(id, ApplicationForm.ModoForm.Baja);
                 usuarioDesktop.ShowDialog();
             }

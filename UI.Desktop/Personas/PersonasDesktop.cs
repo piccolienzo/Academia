@@ -46,13 +46,24 @@ namespace UI.Desktop
             this.textBoxLegajo.Text = Convert.ToString(this.PersonaActual.Legajo);
             this.dateTimePicker1.Value = this.PersonaActual.FechaNacimiento;
             this.textBoxIdPlan.Text = Convert.ToString(this.PersonaActual.IdPlan);
-   
+          
+
+
 
             if (this.Modo == ModoForm.Baja)
             {
 
                 this.botonGuardar.Text = "Eliminar";
-
+                textBoxApellido.Enabled = false;
+                textBoxDireccion.Enabled = false;
+                textBoxEmail.Enabled = false;
+                textBoxIdPlan.Enabled = false;
+                textBoxLegajo.Enabled = false;
+                textBoxNombre.Enabled = false;
+                textBoxTelefono.Enabled = false;
+                comboBoxPlanes.Enabled = false;
+                comboBoxTipoPersona.Enabled = false;
+                dateTimePicker1.Enabled = false;
             }
             else if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
             {
@@ -89,13 +100,16 @@ namespace UI.Desktop
             }
             else if (this.Modo == ModoForm.Modificacion)
             {
-                
-                this.textBoxID.Enabled = false;
+
                 this.PersonaActual.Nombre = this.textBoxNombre.Text;
                 this.PersonaActual.Apellido = this.textBoxApellido.Text;
                 this.PersonaActual.Direccion = this.textBoxDireccion.Text;
                 this.PersonaActual.Email = this.textBoxEmail.Text;
                 this.PersonaActual.Telefono = this.textBoxTelefono.Text;
+                this.PersonaActual.Legajo = Int32.Parse(this.textBoxLegajo.Text);
+                this.PersonaActual.FechaNacimiento = this.dateTimePicker1.Value.Date;
+                this.PersonaActual.IdPlan = Convert.ToInt32(this.textBoxIdPlan.Text);
+                this.PersonaActual.TipoPersona = (Persona.TiposPersonas)(int)comboBoxTipoPersona.SelectedValue;
 
             }
 
@@ -201,6 +215,116 @@ namespace UI.Desktop
                 , MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        private void TextBoxTelefono_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+            if (int.TryParse(t.Text, out int i) == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "Debe ser un numero ");
+            }
+        }
+
+        private void TextBoxTelefono_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxLegajo_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+            if (int.TryParse(t.Text, out int i) == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "Debe ser un numero ");
+            }
+        }
+
+        private void TextBoxLegajo_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxNombre_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+ 
+        }
+
+        private void TextBoxNombre_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxApellido_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+
+        }
+
+        private void TextBoxApellido_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxDireccion_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+
+        }
+
+        private void TextBoxDireccion_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxEmail_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+
+        }
+
+        private void TextBoxEmail_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
         }
     }
 }

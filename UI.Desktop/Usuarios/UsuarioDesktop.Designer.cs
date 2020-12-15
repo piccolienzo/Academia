@@ -268,7 +268,6 @@
             this.TextBoxConfirmarClave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxConfirmarClave.Enabled = false;
             this.TextBoxConfirmarClave.Location = new System.Drawing.Point(445, 102);
             this.TextBoxConfirmarClave.Name = "TextBoxConfirmarClave";
             this.TextBoxConfirmarClave.PasswordChar = '*';

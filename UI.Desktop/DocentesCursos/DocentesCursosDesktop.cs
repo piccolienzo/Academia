@@ -47,6 +47,9 @@ namespace UI.Desktop
             {
 
                 this.BotonAceptar.Text = "Eliminar";
+                comboBoxCargo.Enabled = false;
+                comboBoxIdCurso.Enabled = false;
+                comboBoxIdDocente.Enabled = false;
 
             }
             else if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
@@ -142,12 +145,12 @@ namespace UI.Desktop
 
         private void ComboBoxIdCurso_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.textBoxIdCurso.Text = (string)this.comboBoxIdCurso.SelectedValue.ToString();
+            this.textBoxIdCurso.Text = this.comboBoxIdCurso.SelectedValue.ToString();
         }
 
         private void ComboBoxIdDocente_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.textBoxIdDocente.Text = (string)this.comboBoxIdDocente.SelectedValue.ToString();
+            this.textBoxIdDocente.Text = this.comboBoxIdDocente.SelectedValue.ToString();
         }
 
 

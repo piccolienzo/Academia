@@ -76,6 +76,8 @@ namespace UI.Desktop
             if (this.Modo == ModoForm.Baja)
             {
                 this.BotonAceptar.Text = "Eliminar";
+                TextBoxDescripcion.Enabled = false;
+                TextBoxEjecuta.Enabled = false;
             }
             else if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
             {

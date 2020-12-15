@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +41,11 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.ComboBoxEspecialidades = new System.Windows.Forms.ComboBox();
             this.TextBoxIdEspecialidad = new System.Windows.Forms.TextBox();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -109,6 +112,8 @@
             this.TextBoxDescripcion.Name = "TextBoxDescripcion";
             this.TextBoxDescripcion.Size = new System.Drawing.Size(291, 20);
             this.TextBoxDescripcion.TabIndex = 5;
+            this.TextBoxDescripcion.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxDescripcion_Validating);
+            this.TextBoxDescripcion.Validated += new System.EventHandler(this.TextBoxDescripcion_Validated);
             // 
             // tableLayoutPanel2
             // 
@@ -179,6 +184,10 @@
             this.TextBoxIdEspecialidad.Size = new System.Drawing.Size(50, 20);
             this.TextBoxIdEspecialidad.TabIndex = 4;
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // PlanesDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +203,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +222,7 @@
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.ComboBox ComboBoxEspecialidades;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

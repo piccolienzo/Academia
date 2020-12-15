@@ -44,6 +44,8 @@ namespace UI.Desktop
             {
 
                 this.BotonAceptar.Text = "Eliminar";
+                ComboBoxEspecialidades.Enabled = false;
+                TextBoxDescripcion.Enabled = false;
 
             }
             else if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
@@ -119,24 +121,50 @@ namespace UI.Desktop
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if (this.Validar())
             {
-
-
-                MessageBox.Show("Guardado");
                 this.GuardarCambios();
                 this.Close();
+            }
+        }
 
+        private new bool Validar()
+        {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                if (this.Continuar(this.BotonAceptar.Text, "Plan"))
+                {
+                    Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
+                    , MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-               
-                MessageBox.Show("Existen errores");
-
-
-
+                Notificar("Error", "Existen errores, porfavor verificar el formulario", MessageBoxButtons.OK
+                , MessageBoxIcon.Error);
+                return false;
             }
-            this.Validar();
+        }
+
+        private void TextBoxDescripcion_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider2.SetError(t, "No debe estar en blanco");
+            }
+        }
+
+        private void TextBoxDescripcion_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider2.SetError(t, "");
         }
 
         private void PlanesDesktop_Load(object sender, EventArgs e)

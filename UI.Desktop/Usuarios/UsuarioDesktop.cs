@@ -48,6 +48,11 @@ namespace UI.Desktop
 
                 this.BotonAceptar.Text = "Eliminar";
                 this.TextBoxClave.Enabled = false;
+                TextBoxApellido.Enabled = false;
+                TextBoxConfirmarClave.Enabled = false;
+                TextBoxEmail.Enabled = false;
+                TextBoxNombre.Enabled = false;
+                TextBoxUsuario.Enabled = false;
             } else if (this.Modo == ModoForm.Consulta)
             {
 
@@ -121,31 +126,30 @@ namespace UI.Desktop
 
         
         }
-        public new bool Validar() {
-
-
+        private new bool Validar()
+        {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-
-
-                MessageBox.Show("Todo ok ");
-                return true;
-
+                if (this.Continuar(this.BotonAceptar.Text, "Inscripcion alumno"))
+                {
+                    Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
+                    , MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                // this.Notificar("Existen errores", );
-                MessageBox.Show("Todo mal :/ ");
+                Notificar("Error", "Existen errores, porfavor verificar el formulario", MessageBoxButtons.OK
+                , MessageBoxIcon.Error);
                 return false;
-
-
             }
+        }
 
 
-
-            }
-
-        
 
         private void TextBoxNombre_Validating(object sender, CancelEventArgs e)
         {
@@ -153,7 +157,7 @@ namespace UI.Desktop
             {
                 e.Cancel = true;
                 //this.TextBoxNombre.Focus();
-                ErrorProviderApp.SetError(this.TextBoxNombre, " no deberia estar en blanco");
+                ErrorProviderApp.SetError(this.TextBoxNombre, "No deberia estar en blanco");
             }
             else
             {
@@ -169,7 +173,7 @@ namespace UI.Desktop
                 {
                     e.Cancel = true;
                     //this.TextBoxEmail.Focus();
-                    ErrorProviderApp.SetError(this.TextBoxEmail, " no deberia estar en blanco");
+                    ErrorProviderApp.SetError(this.TextBoxEmail, "No deberia estar en blanco");
                 }
                 else
                 {
@@ -186,7 +190,7 @@ namespace UI.Desktop
                 {
                     e.Cancel = true;
                     //this.TextBoxApellido.Focus();
-                    ErrorProviderApp.SetError(this.TextBoxApellido, " no deberia estar en blanco");
+                    ErrorProviderApp.SetError(this.TextBoxApellido, "No deberia estar en blanco");
                 }
                 else
                 {
@@ -203,7 +207,7 @@ namespace UI.Desktop
                 {
                     e.Cancel = true;
                     
-                    ErrorProviderApp.SetError(this.TextBoxUsuario, " no deberia estar en blanco");
+                    ErrorProviderApp.SetError(this.TextBoxUsuario, "No deberia estar en blanco");
                 }
                 else
                 {
@@ -220,7 +224,7 @@ namespace UI.Desktop
                 {
                     e.Cancel = true;
 
-                    ErrorProviderApp.SetError(this.TextBoxClave, " no deberia estar en blanco");
+                    ErrorProviderApp.SetError(this.TextBoxClave, "No deberia estar en blanco");
                 }
                
 
@@ -242,13 +246,13 @@ namespace UI.Desktop
                 {
                     e.Cancel = true;
                     
-                    ErrorProviderApp.SetError(this.TextBoxConfirmarClave, " no deberia estar en blanco");
+                    ErrorProviderApp.SetError(this.TextBoxConfirmarClave, "No deberia estar en blanco");
                 }
                 else if (TextBoxClave.Text != this.TextBoxConfirmarClave.Text)
                 {
                     e.Cancel = true;
                     //this.TextBoxConfirmarClave.Focus();
-                    ErrorProviderApp.SetError(this.TextBoxConfirmarClave, " clave no coincide");
+                    ErrorProviderApp.SetError(this.TextBoxConfirmarClave, "La clave no coincide");
                 }
 
                 else
