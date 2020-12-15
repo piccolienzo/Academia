@@ -60,7 +60,7 @@ namespace UI.Desktop
             }
             else
             {
-                int id = ((Comision)this.DataGridViewCursos.SelectedRows[0].DataBoundItem).ID;
+                int id = ((Curso)this.DataGridViewCursos.SelectedRows[0].DataBoundItem).ID;
                 CursosDesktop cursosDesktop = new CursosDesktop(id, ApplicationForm.ModoForm.Baja);
                 cursosDesktop.ShowDialog();
             }

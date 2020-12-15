@@ -64,6 +64,8 @@ namespace UI.Desktop
             if (this.Modo == ModoForm.Baja)
             {
                 this.BotonAceptar.Text = "Eliminar";
+                ComboIDModulo.Enabled = false;
+                ComboIDUsuario.Enabled = false;
             }
             else if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
             {

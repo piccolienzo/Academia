@@ -114,6 +114,8 @@
             this.TextBoxIdComision.ReadOnly = true;
             this.TextBoxIdComision.Size = new System.Drawing.Size(94, 20);
             this.TextBoxIdComision.TabIndex = 10;
+            this.TextBoxIdComision.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxComision_Validating);
+            this.TextBoxIdComision.Validated += new System.EventHandler(this.TextBoxComision_Validated);
             // 
             // ComboComision
             // 
@@ -122,7 +124,7 @@
             this.ComboComision.Name = "ComboComision";
             this.ComboComision.Size = new System.Drawing.Size(94, 21);
             this.ComboComision.TabIndex = 11;
-            this.ComboComision.SelectedIndexChanged += new System.EventHandler(this.ComboComision_SelectedIndexChanged);
+            this.ComboComision.SelectedValueChanged += new System.EventHandler(this.ComboComision_SelectedValueChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -181,6 +183,8 @@
             this.TextBoxIdAlumno.ReadOnly = true;
             this.TextBoxIdAlumno.Size = new System.Drawing.Size(94, 20);
             this.TextBoxIdAlumno.TabIndex = 10;
+            this.TextBoxIdAlumno.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxAlumno_Validating);
+            this.TextBoxIdAlumno.Validated += new System.EventHandler(this.TextBoxAlumno_Validated);
             // 
             // ComboAlumno
             // 
@@ -189,7 +193,7 @@
             this.ComboAlumno.Name = "ComboAlumno";
             this.ComboAlumno.Size = new System.Drawing.Size(94, 21);
             this.ComboAlumno.TabIndex = 11;
-            this.ComboAlumno.SelectedIndexChanged += new System.EventHandler(this.ComboAlumno_SelectedIndexChanged);
+            this.ComboAlumno.SelectedValueChanged += new System.EventHandler(this.ComboAlumno_SelectedValueChanged);
             // 
             // label1
             // 
@@ -242,7 +246,6 @@
             this.TextBoxNota.Name = "TextBoxNota";
             this.TextBoxNota.Size = new System.Drawing.Size(100, 20);
             this.TextBoxNota.TabIndex = 10;
-            this.TextBoxNota.Text = "0";
             this.TextBoxNota.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxNota_Validating);
             this.TextBoxNota.Validated += new System.EventHandler(this.TextBoxNota_Validated);
             // 
@@ -253,8 +256,8 @@
             this.TextBoxCondicion.Size = new System.Drawing.Size(100, 20);
             this.TextBoxCondicion.TabIndex = 11;
             this.TextBoxCondicion.Text = "Inscripto";
-            this.TextBoxCondicion.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxCondicion_Validating);
-            this.TextBoxCondicion.Validated += new System.EventHandler(this.TextBoxNota_Validated);
+            this.TextBoxCondicion.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxDescripcion_Validating);
+            this.TextBoxCondicion.Validated += new System.EventHandler(this.TextBoxDescripcion_Validated);
             // 
             // errorProvider1
             // 

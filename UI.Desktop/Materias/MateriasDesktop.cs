@@ -1,5 +1,4 @@
-﻿using Business.Logic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Logic;
 using Business.Entities;
 
 namespace UI.Desktop
@@ -133,30 +133,85 @@ namespace UI.Desktop
 
         }
 
-       
+
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            
+            if (this.Validar())
+            {
+                this.GuardarCambios();
+            }
+        }
+
+        private new bool Validar()
+        {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-
-
-                MessageBox.Show("Todo ok ");
-                this.GuardarCambios();
-                this.Close();
-
+                if (this.Continuar(this.BotonAceptar.Text, "Materia"))
+                {
+                    Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
+                    , MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                // this.Notificar("Existen errores", );
-                MessageBox.Show("Todo mal :/ ");
-
-
-
+                Notificar("Error", "Existen errores, porfavor verificar el formulario", MessageBoxButtons.OK
+                , MessageBoxIcon.Error);
+                return false;
             }
-            this.Validar();
-            
+        }
+        
+        private void TextBoxDescripcion_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+        }
+
+        private void TextBoxDescripcion_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxHsSemanales_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+        }
+
+        private void TextBoxHsSemanales_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
+        }
+
+        private void TextBoxHsTotales_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(t, "No debe estar en blanco");
+            }
+        }
+
+        private void TextBoxHsTotales_Validated(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            errorProvider1.SetError(t, "");
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)

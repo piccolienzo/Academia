@@ -51,25 +51,26 @@ namespace UI.Desktop
 
         private void BotonEliminar_Click(object sender, EventArgs e)
         {
-
-            if (this.DataGridViewEspecialidades.SelectedRows is null)
-            { }
-            else
+            if (Validar(BotonBorrar))
             {
-                int id = ((Business.Entities.Especialidad)this.DataGridViewEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                if (this.DataGridViewEspecialidades.SelectedRows is null)
+                { }
+                else
+                {
+                    int id = ((Business.Entities.Especialidad)this.DataGridViewEspecialidades.SelectedRows[0].DataBoundItem).ID;
 
-                Modo = ModoForm.Baja;
-                Especialidad esp = new EspecialidadLogic().GetOne(id);
-               
-                esp.State = BusinessEntity.States.Deleted;
+                    Modo = ModoForm.Baja;
+                    Especialidad esp = new EspecialidadLogic().GetOne(id);
 
-                EspecialidadLogic espDel = new EspecialidadLogic();
-                espDel.Save(esp);
+                    esp.State = BusinessEntity.States.Deleted;
+
+                    EspecialidadLogic espDel = new EspecialidadLogic();
+                    espDel.Save(esp);
 
 
+                }
+                this.Listar();
             }
-            this.Listar();
-
         }
 
         private void BotonEditar_Click(object sender, EventArgs e)
@@ -97,7 +98,7 @@ namespace UI.Desktop
 
         private void BotonGuardar_Click(object sender, EventArgs e)
         {
-            if (Validar())
+            if (Validar(cicButton2))
             {
                 int id = int.Parse(this.TextBoxId.Text);
                 if (id == 0)
@@ -128,15 +129,26 @@ namespace UI.Desktop
 
         }
 
-        private new bool Validar()
+        private new bool Validar(Button boton)
         {
-            if (string.IsNullOrWhiteSpace(this.TextBoxDescripcion.Text))
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                return false;
+                if (this.Continuar(boton.Text, "Especialidad"))
+                {
+                    Notificar("Atención", "Cambios guardados", MessageBoxButtons.OK
+                    , MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return true;
+                Notificar("Error", "Existen errores, porfavor verificar el formulario", MessageBoxButtons.OK
+                , MessageBoxIcon.Error);
+                return false;
             }
         }
 

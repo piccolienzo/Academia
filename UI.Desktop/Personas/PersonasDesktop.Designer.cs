@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -54,9 +55,11 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxIdPlan = new System.Windows.Forms.TextBox();
             this.comboBoxPlanes = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -126,6 +129,8 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombre.TabIndex = 1;
+            this.textBoxNombre.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxNombre_Validating);
+            this.textBoxNombre.Validated += new System.EventHandler(this.TextBoxNombre_Validated);
             // 
             // textBoxApellido
             // 
@@ -133,6 +138,8 @@
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(200, 20);
             this.textBoxApellido.TabIndex = 2;
+            this.textBoxApellido.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxNombre_Validating);
+            this.textBoxApellido.Validated += new System.EventHandler(this.TextBoxApellido_Validated);
             // 
             // textBoxDireccion
             // 
@@ -140,6 +147,8 @@
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(200, 20);
             this.textBoxDireccion.TabIndex = 3;
+            this.textBoxDireccion.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxDireccion_Validating);
+            this.textBoxDireccion.Validated += new System.EventHandler(this.TextBoxDireccion_Validated);
             // 
             // label1
             // 
@@ -219,6 +228,8 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
             this.textBoxEmail.TabIndex = 12;
+            this.textBoxEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxEmail_Validating);
+            this.textBoxEmail.Validated += new System.EventHandler(this.TextBoxEmail_Validated);
             // 
             // textBoxTelefono
             // 
@@ -226,6 +237,8 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 13;
+            this.textBoxTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxTelefono_Validating);
+            this.textBoxTelefono.Validated += new System.EventHandler(this.TextBoxTelefono_Validated);
             // 
             // textBoxLegajo
             // 
@@ -233,6 +246,8 @@
             this.textBoxLegajo.Name = "textBoxLegajo";
             this.textBoxLegajo.Size = new System.Drawing.Size(200, 20);
             this.textBoxLegajo.TabIndex = 15;
+            this.textBoxLegajo.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxLegajo_Validating);
+            this.textBoxLegajo.Validated += new System.EventHandler(this.TextBoxLegajo_Validated);
             // 
             // comboBoxTipoPersona
             // 
@@ -324,6 +339,10 @@
             this.comboBoxPlanes.TabIndex = 23;
             this.comboBoxPlanes.SelectedValueChanged += new System.EventHandler(this.ComboBoxPlanes_SelectedValueChanged);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // PersonasDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +357,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +390,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox textBoxIdPlan;
         private System.Windows.Forms.ComboBox comboBoxPlanes;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
