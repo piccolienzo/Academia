@@ -62,6 +62,18 @@ namespace Util
             return docentes;
         }
 
+        public static List<Business.Entities.Persona> GetAlumnos()
+        {
+            List<Business.Entities.Persona> personas = new Business.Logic.PersonaLogic().GetAll();
+
+
+            List<Business.Entities.Persona> alumno = (from docente in personas
+                                                        where docente.TipoPersona == Business.Entities.Persona.TiposPersonas.Alumno
+                                                        select docente
+                                                         ).ToList();
+            return alumno;
+        }
+
         public class TiposPersonas
         {
             public int Numero { get; set; }

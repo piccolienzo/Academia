@@ -99,6 +99,7 @@
     <Content Include="Materias.aspx" />
     <Content Include="Modulos.aspx" />
     <Content Include="ModulosUsuarios.aspx" />
+    <Content Include="Notas.aspx" />
     <Content Include="Personas.aspx" />
     <Content Include="Planes.aspx" />
     <Content Include="ReporteCursos.aspx" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="ModulosUsuarios.aspx.designer.cs">
       <DependentUpon>ModulosUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notas.aspx.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notas.aspx.designer.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personas.aspx.cs">
       <DependentUpon>Personas.aspx</DependentUpon>

@@ -9,7 +9,7 @@ using Business.Logic;
 
 namespace Util
 {
-    class Informes
+    public class Informes
     {
         private AlumnoInscripcionLogic alumnoInscripcionLogic;
         private CursoLogic cursoLogic;
@@ -18,6 +18,7 @@ namespace Util
         private MateriaLogic materiaLogic;
         private PlanLogic planLogic;
         private EspecialidadLogic especialidadLogic;
+        
 
         public PlanLogic PlanLogic
         {
@@ -98,6 +99,34 @@ namespace Util
             }
         }
 
+
+        public static List<ListaParaNotas> GetListaParaNotas(int id_docente)
+        {
+            List<AlumnoInscripcion> alumnoInscripciones = new Business.Logic.AlumnoInscripcionLogic().GetAll();
+            List<Business.Entities.Persona> alumnos = Personas.GetAlumnos();
+            List<DocenteCurso> docenteCursos = new DocenteCursoLogic().GetAll();
+
+
+            List<ListaParaNotas> x = (
+
+                from docentecurso in docenteCursos 
+                join alumins in alumnoInscripciones on docentecurso.IdCurso equals alumins.IdCurso
+                join alumno in alumnos on alumins.IdAlumno equals alumno.ID
+                where docentecurso.IdDocente == id_docente
+                select new ListaParaNotas
+                {
+                    IDInscripcion = alumins.ID,
+                    ApellidoNombreAlumno = alumno.Apellido+" "+alumno.Nombre,
+                    Nota = alumins.Nota,
+                    LegajoAlumno = alumno.Legajo
+                }
+                
+
+                ).ToList();
+            return x;
+
+
+        }
 
 
 
@@ -209,7 +238,7 @@ namespace Util
 
 
     }
-    class InformeCursos
+    public class InformeCursos
     {
         public int IdCurso { get; set; }
         public int Cupo { get; set; }
@@ -218,7 +247,7 @@ namespace Util
         public int IdAlumnos { get; set; }
     }
 
-    class InformePlanes
+    public class InformePlanes
     {
         public int IdPlan { get; set; }
         public string DescripcionPlan { get; set; }
@@ -227,8 +256,8 @@ namespace Util
         public string TipoPersona { get; set; }
         public int Legajo { get; set; }
     }
-    
-    class InformeNotas
+
+    public class InformeNotas
     {
         public int IdInscripcion { get; set; }
         public int IdAlumno { get; set; }
@@ -239,6 +268,15 @@ namespace Util
         public string ComisionDesc { get; set; }
         public string MateriaDesc { get; set; }
        
+    }
+
+    public class ListaParaNotas
+    {
+        public int IDInscripcion { get; set; }
+        public int Nota { get; set; }
+        public string ApellidoNombreAlumno { get; set; }
+        public int LegajoAlumno { get; set; }
+
     }
 
 }

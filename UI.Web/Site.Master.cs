@@ -87,7 +87,7 @@ namespace UI.Web
 
         protected void LinkNav_Click(object sender, EventArgs e)
         {
-
+            Page.Response.Redirect("~/Notas.aspx");
         }
 
         protected void LinkReportes_Click(object sender, EventArgs e)

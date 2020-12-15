@@ -246,6 +246,8 @@ namespace UI.Web
             this.GridViewUsuarios.Enabled = true;
             this.PanelBotonesGrilla.Visible = true;
             this.PanelABM.Visible = false; //CAMBIAR A FALSE;
+            PanelAccionesFormulario.Visible = false;
+            
 
 
 
