@@ -629,7 +629,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.89583in</Height>
+    <Height>0.90625in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
@@ -639,7 +639,7 @@
   <Width>6.68221in</Width>
   <Page>
     <PageHeader>
-      <Height>1.84036cm</Height>
+      <Height>1.99911cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -672,6 +672,19 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Color>Silver</Color>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1.93147cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
         <Textbox Name="Textbox6">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -679,7 +692,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fecha: </Value>
+                  <Value>Fecha emsion: </Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Format>f</Format>
@@ -704,12 +717,41 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.94933cm</Top>
+          <Top>0.14111cm</Top>
           <Height>0.75875cm</Height>
           <Width>16.87513cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border />
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "Pagina "&amp; Globals!PageNumber &amp;" de "&amp;Globals!TotalPages</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.97662cm</Top>
+          <Left>0.81703cm</Left>
+          <Height>0.95485cm</Height>
+          <Width>9.14104cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -719,11 +761,10 @@
       </ReportItems>
       <Style>
         <Border>
-          <Color>Silver</Color>
           <Style>None</Style>
         </Border>
       </Style>
-    </PageHeader>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

@@ -18,8 +18,8 @@ namespace Util
         private MateriaLogic materiaLogic;
         private PlanLogic planLogic;
         private EspecialidadLogic especialidadLogic;
-        
 
+        #region
         public PlanLogic PlanLogic
         {
             get
@@ -98,7 +98,7 @@ namespace Util
                 return materiaLogic;
             }
         }
-
+        #endregion
 
         public static List<ListaParaNotas> GetListaParaNotas(int id_docente)
         {
@@ -150,6 +150,8 @@ namespace Util
                     join materia in materias on curso.IdMateria equals materia.ID
                     join comision in comisiones on curso.IdComision equals comision.ID
 
+
+
                     select new InformeNotas
                     {
                         IdInscripcion = informe.ID,
@@ -164,6 +166,7 @@ namespace Util
                 ).ToList();
 
             informeNotas = (List<InformeNotas>)i;
+            var total = informeNotas.Where(x => x.Nota > 6).Sum(x=>x.Nota);
 
             return informeNotas;
         }
@@ -182,18 +185,14 @@ namespace Util
                 join persona in personas on plan.ID equals persona.IdPlan
 
                 where persona.TipoPersona == Business.Entities.Persona.TiposPersonas.Alumno
-                
-               
-               
-            
-
+                              
                 select new InformePlanes
                 {
                     IdPlan = plan.ID,
                     DescripcionPlan = plan.Descripcion,
                     DescripcionEspecialidad = especialidad.Descripcion,
                     DescripcionComision = comision.Descripcion,
-                    TipoPersona = persona.TipoPersona.ToString(),
+                    TipoPersona = persona.Nombre+" "+persona.Apellido,
                     Legajo = persona.Legajo,
 
                 }
@@ -280,3 +279,31 @@ namespace Util
     }
 
 }
+/*
+         List<LiquidacionGasto> listaGastosAgrupados = (from liquidacionGasto in listaLiquidacionGastos
+                                                               select new LiquidacionGasto
+                                                               {
+                                                                   Aprobado = true,
+                                                                   EsGastoBldAgro = liquidacionGasto.EsGastoBldAgro,
+                                                                   FechaGasto = fechaHasta,
+                                                                   IdLote = idLote,
+                                                                   IdSubTipoGasto = liquidacionGasto.IdSubTipoGasto,
+                                                                   LiquidacionSubTipoGasto = liquidacionGasto.LiquidacionSubTipoGasto,
+                                                                   ImporteTotal = listaLiquidacionGastos.Where(x => x.IdSubTipoG
+From Andrés Sangrá to Everyone:  07:39 PM
+ImporteTotal = listaLiquidacionGastos.Where(x => x.IdSubTipoGasto == liquidacionGasto.IdSubTipoGasto && x.EsGastoBldAgro == liquidacionGasto.EsGastoBldAgro).Sum(y => y.ImporteTotal)
+                                                               }).GroupBy(x => new { x.EsGastoBldAgro, x.IdSubTipoGasto }).Select(g => g.First()).ToList();
+
+
+var listaDtesRepetido = listaOrdenesNegocioMasDeUnLoteAgriness.GroupBy(x => x.NumeroDteFormateado)
+                            .Select(c => new
+                            {
+                                c.Key,
+                                Cantidad = c.Select(x => x.NumeroDteFormateado).Count()
+                            }).Where(y => y.Cantidad > 1).Select(z => z.Key).ToList();
+
+
+
+
+
+ */

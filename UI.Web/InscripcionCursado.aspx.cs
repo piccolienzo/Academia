@@ -65,7 +65,7 @@ namespace UI.Web
            
             CursoLogic cl = new CursoLogic();
 
-            if (cl.GetOne(idCurso).Cupo < 1)
+            if (cl.GetOne(idCurso).Cupo > 1)
             {
                 Inscribir(idCurso,IdPersona,"Inscripto");
                 ActualizarCupos(idCurso);
