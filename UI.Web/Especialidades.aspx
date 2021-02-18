@@ -20,6 +20,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
+    <div style="text-align:center"><h1>Especialidades</h1></div>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.EspecialidadLogic"></asp:ObjectDataSource>
     <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Left">
         <asp:GridView ID="GridViewEspecialidades" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" OnSelectedIndexChanged="GridViewEspecialidades_SelectedIndexChanged" CssClass="table table-striped" GridLines="Vertical" Font-Size="Large">
@@ -52,6 +53,8 @@
     </asp:Panel>
        
         <asp:Panel ID="PanelABM" CssClass="centered-content" Width="50%" runat="server">
+             <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
             <div>
                 <asp:Label ID="Label3" runat="server" Text="ID" Font-Size="Large"></asp:Label>
                 <asp:TextBox ID="TextBoxID" runat="server" CssClass="form-control form-control-lg " ReadOnly="True"></asp:TextBox>

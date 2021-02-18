@@ -153,6 +153,7 @@ namespace UI.Web
             PanelBotonesGrilla.Visible = false;
             PanelABM.Visible = true;
             FormMode = FormModes.Alta;
+            LabelModo.Text = FormMode.ToString();
         }
 
         protected void BotonEditar_Click(object sender, EventArgs e)
@@ -164,7 +165,9 @@ namespace UI.Web
                 PanelBotonesGrilla.Visible = false;
                 PanelABM.Visible = true;
                 FormMode = FormModes.Modificacion;
+                LabelModo.Text = FormMode.ToString();
                 MapearDeEntidad(this.SelectedID);
+
             }
         }
 
@@ -178,6 +181,7 @@ namespace UI.Web
                 PanelAcciones.Visible = true;
                 PanelBotonesGrilla.Visible = true;
                 PanelABM.Visible = true;
+                LabelModo.Text = FormMode.ToString();
 
             }
         }
@@ -189,6 +193,7 @@ namespace UI.Web
             GridViewDocentesCursos.Enabled = true;
             PanelABM.Visible = false;
             PanelAcciones.Visible = false;
+
             ClearForm();
         }
 

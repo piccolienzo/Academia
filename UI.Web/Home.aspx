@@ -24,7 +24,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
 
     <asp:Panel CssClass="centered-content" Width="50%" runat="server">
-
+        <div style="text-align:center"><h1>Home</h1></div>
     <div>
         <h2>¡Bienvenido <asp:Label Text="Usuario" runat="server" ID="LblUserBienvenida" OnLoad="LblUserBienvenida_Load" />!
         </h2>

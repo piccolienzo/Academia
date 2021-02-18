@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.86028cm</Width>
+              <Width>1.84084cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.3529cm</Width>
+              <Width>1.33346cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.15132cm</Width>
+              <Width>3.20744cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.44638cm</Width>
+              <Width>3.03548cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.35757cm</Width>
+              <Width>1.97313cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.70153cm</Width>
+              <Width>1.68209cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.87653cm</Width>
+              <Width>5.98571cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.22631cm</Width>
+              <Width>1.84187cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -621,7 +621,7 @@
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>DataSetReporteNotasCompleto</DataSetName>
         <Height>2.20224cm</Height>
-        <Width>16.97282cm</Width>
+        <Width>20.9cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -636,10 +636,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>6.68221in</Width>
+  <Width>8.29in</Width>
   <Page>
     <PageHeader>
-      <Height>1.99911cm</Height>
+      <Height>1cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -681,7 +681,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.93147cm</Height>
+      <Height>1.69335cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -692,7 +692,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fecha emsion: </Value>
+                  <Value>Fecha emision: </Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Format>f</Format>
@@ -744,9 +744,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.97662cm</Top>
-          <Left>0.81703cm</Left>
-          <Height>0.95485cm</Height>
-          <Width>9.14104cm</Width>
+          <Left>0.31432cm</Left>
+          <Height>0.61089cm</Height>
+          <Width>16.56081cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -767,10 +767,10 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style>
       <Border>

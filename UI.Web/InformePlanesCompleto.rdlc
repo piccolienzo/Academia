@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.34011cm</Width>
+              <Width>2.37054cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.23502cm</Width>
+              <Width>5.11703cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.02803cm</Width>
+              <Width>4.27605cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.06978cm</Width>
+              <Width>2.83563cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.89574cm</Width>
+              <Width>4.27962cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.35529cm</Width>
+              <Width>2.12114cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -475,7 +475,7 @@
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>DataSetInformePlanes</DataSetName>
         <Height>2.20224cm</Height>
-        <Width>16.92397cm</Width>
+        <Width>21cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -486,10 +486,10 @@
     <Height>0.86702in</Height>
     <Style />
   </Body>
-  <Width>6.66298in</Width>
+  <Width>8.29in</Width>
   <Page>
     <PageHeader>
-      <Height>1.71979cm</Height>
+      <Height>1.01423cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -500,7 +500,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de notas</Value>
+                  <Value>Reporte de planes</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                   </Style>
@@ -511,8 +511,50 @@
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Left>0.04885cm</Left>
-          <Height>0.8435cm</Height>
+          <Height>1.01423cm</Height>
           <Width>8.81952cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Color>Silver</Color>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1.71979cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= "Pagina "&amp; Globals!PageNumber &amp;" de "&amp;Globals!TotalPages</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.94133cm</Top>
+          <Left>0.31432cm</Left>
+          <Height>0.61089cm</Height>
+          <Width>16.56081cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -530,7 +572,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fecha: </Value>
+                  <Value>Fecha emision: </Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Format>f</Format>
@@ -555,8 +597,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.91406cm</Top>
-          <Left>0.04884cm</Left>
+          <Top>0.10582cm</Top>
           <Height>0.75875cm</Height>
           <Width>16.87513cm</Width>
           <ZIndex>1</ZIndex>
@@ -571,17 +612,16 @@
       </ReportItems>
       <Style>
         <Border>
-          <Color>Silver</Color>
           <Style>None</Style>
         </Border>
       </Style>
-    </PageHeader>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

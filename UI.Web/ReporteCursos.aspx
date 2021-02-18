@@ -22,6 +22,7 @@
 
 </head>
 <body>
+    <div style="text-align:center"><h1>Reporte de cursos</h1></div>
     <form id="form1"  runat="server">
         <asp:Button Text="Volver" runat="server" CssClass="btn btn-lg  btn-dark" OnClick="Unnamed1_Click" />
         <div class="centered-content centered-text">

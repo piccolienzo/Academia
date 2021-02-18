@@ -134,6 +134,8 @@ namespace UI.Web
             PanelBotonesGrilla.Visible = false;
             PanelABM.Visible = true;
             FormMode = FormModes.Alta;
+
+            LabelModo.Text = FormMode.ToString();
         }
 
         protected void BotonEditar_Click(object sender, EventArgs e)
@@ -146,6 +148,8 @@ namespace UI.Web
                 PanelABM.Visible = true;
                 FormMode = FormModes.Modificacion;
                 MapearDeEntidad(this.SelectedID);
+
+                LabelModo.Text = FormMode.ToString();
             }
         }
 
@@ -159,6 +163,8 @@ namespace UI.Web
                 PanelAcciones.Visible = true;
                 PanelBotonesGrilla.Visible = true;
                 PanelABM.Visible = true;
+
+                LabelModo.Text = FormMode.ToString();
 
             }
         }

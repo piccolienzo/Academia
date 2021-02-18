@@ -79,6 +79,7 @@ namespace UI.Web
             
             LinkButton lnk = (LinkButton)Master.FindControl("LinkUsuarios");
             lnk.CssClass = "nav-link active";
+            
 
         }
 
@@ -175,7 +176,7 @@ namespace UI.Web
             this.PanelBotonesGrilla.Visible = false;
             this.PanelABM.Visible = true;
             this.FormMode = FormModes.Alta;
-                
+            LabelModo.Text = FormMode.ToString();
             this.EnableForm(true);
 
         }
@@ -191,7 +192,7 @@ namespace UI.Web
                 this.PanelAccionesFormulario.Visible = true;
                 this.PanelBotonesGrilla.Visible = false;
                 this.PanelABM.Visible = true;
-                
+                LabelModo.Text = FormMode.ToString();
                 this.EnableForm(false);
                 
             }
@@ -207,7 +208,8 @@ namespace UI.Web
                 this.EnableForm(true);
                 this.PanelABM.Visible = true;
                 this.FormMode = FormModes.Modificacion;
-                
+
+                LabelModo.Text = FormMode.ToString();
                 this.MapearDeUsuario(this.SelectedID, this.FormMode.ToString());
             }
         }

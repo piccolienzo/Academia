@@ -146,6 +146,8 @@ namespace UI.Web
             PanelBotonesGrilla.Visible = false;
             PanelABM.Visible = true;
             FormMode = FormModes.Alta;
+            LabelModo.Text = FormMode.ToString();
+
             EnableForm(true);
         }
 
@@ -159,6 +161,8 @@ namespace UI.Web
                 PanelABM.Visible = true;
                 EnableForm(true);
                 FormMode = FormModes.Modificacion;
+                LabelModo.Text = FormMode.ToString();
+
                 MapearDeEntidad(this.SelectedID);
             }
         }
@@ -173,6 +177,8 @@ namespace UI.Web
                 PanelAcciones.Visible = true;
                 PanelBotonesGrilla.Visible = true;
                 PanelABM.Visible = true;
+                LabelModo.Text = FormMode.ToString();
+
                 this.EnableForm(false);
             }
         }

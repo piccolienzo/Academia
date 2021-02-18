@@ -100,33 +100,7 @@ namespace Util
         }
         #endregion
 
-        public static List<ListaParaNotas> GetListaParaNotas(int id_docente)
-        {
-            List<AlumnoInscripcion> alumnoInscripciones = new Business.Logic.AlumnoInscripcionLogic().GetAll();
-            List<Business.Entities.Persona> alumnos = Personas.GetAlumnos();
-            List<DocenteCurso> docenteCursos = new DocenteCursoLogic().GetAll();
-
-
-            List<ListaParaNotas> x = (
-
-                from docentecurso in docenteCursos 
-                join alumins in alumnoInscripciones on docentecurso.IdCurso equals alumins.IdCurso
-                join alumno in alumnos on alumins.IdAlumno equals alumno.ID
-                where docentecurso.IdDocente == id_docente
-                select new ListaParaNotas
-                {
-                    IDInscripcion = alumins.ID,
-                    ApellidoNombreAlumno = alumno.Apellido+" "+alumno.Nombre,
-                    Nota = alumins.Nota,
-                    LegajoAlumno = alumno.Legajo
-                }
-                
-
-                ).ToList();
-            return x;
-
-
-        }
+        
 
 
 
@@ -269,14 +243,7 @@ namespace Util
        
     }
 
-    public class ListaParaNotas
-    {
-        public int IDInscripcion { get; set; }
-        public int Nota { get; set; }
-        public string ApellidoNombreAlumno { get; set; }
-        public int LegajoAlumno { get; set; }
-
-    }
+   
 
 }
 /*

@@ -29,7 +29,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
-    
+    <div style="text-align:center"><h1>Usuarios</h1></div>
     <asp:Panel  runat="server" ScrollBars="Auto">
 
         
@@ -65,7 +65,8 @@
 
 
         <asp:Panel CssClass="centered-content" Width="50%" id="PanelABM" Visible="true" runat="server" >          
-            
+            <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
             <div class="form-group">
                 <asp:Label ID="LabelNombre" LabelFor="TextBoxNombre" runat="server" Text="Nombre:" Font-Size="Large" />  <br />                
                 <asp:TextBox ID="TextBoxNombre" CssClass="form-control form-control-lg " runat="server" /> 

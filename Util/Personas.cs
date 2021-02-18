@@ -62,6 +62,17 @@ namespace Util
             return docentes;
         }
 
+        public static Business.Entities.Persona FindDocente(int id)
+        {
+            var list = GetDocentes();
+            Business.Entities.Persona doc = (Business.Entities.Persona)(
+                from li in list
+                where li.ID == id
+                select li
+                );
+            return doc;
+        }
+
         public static List<Business.Entities.Persona> GetAlumnos()
         {
             List<Business.Entities.Persona> personas = new Business.Logic.PersonaLogic().GetAll();

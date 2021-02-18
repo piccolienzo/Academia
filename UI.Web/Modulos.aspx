@@ -15,6 +15,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
+    <div style="text-align:center"><h1>Módulos</h1></div>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.ModuloLogic"></asp:ObjectDataSource>
     <asp:Panel ID="Panel4" runat="server" ScrollBars="Auto">
         <asp:GridView ID="GridViewModulo" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" OnSelectedIndexChanged="GridViewModulo_SelectedIndexChanged" CssClass="table table-striped" GridLines="Vertical" Font-Size="Large">
@@ -54,6 +55,10 @@
         <asp:Button ID="BotonEliminar" runat="server" Text="Eliminar" OnClick="BotonEliminar_Click" CssClass="btn btn-lg  btn-dark" Width="30%" />
     </asp:Panel>
     <asp:Panel ID="PanelABM" CssClass="centered-content" Width="50%" runat="server">
+        
+
+        <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
         <div class="form-group">
 
             <asp:Label ID="Label3" runat="server" Text="ID" Font-Size="Large"></asp:Label>

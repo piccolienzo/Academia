@@ -20,6 +20,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
+    <div style="text-align:center"><h1>Cursos</h1></div>
     <asp:Panel ID="Panel1" runat="server">
         <asp:GridView ID="GridViewCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped" DataSourceID="ObjectDataSource2" OnSelectedIndexChanged="GridViewCursos_SelectedIndexChanged" Font-Size="Large">
             <Columns>
@@ -32,13 +33,15 @@
                         <asp:Label ID="LabelId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
+                <asp:BoundField DataField="IdComision" HeaderText="IdComision" SortExpression="IdComision" />
+                <asp:BoundField DataField="NombreComision" HeaderText="NombreComision" SortExpression="NombreComision" />
+                <asp:BoundField DataField="IdMateria" HeaderText="IdMateria" SortExpression="IdMateria" />
+                <asp:BoundField DataField="NombreMateria" HeaderText="NombreMateria" SortExpression="NombreMateria" />
                 <asp:BoundField DataField="AñoCalendario" HeaderText="AñoCalendario" SortExpression="AñoCalendario" />
                 <asp:BoundField DataField="Cupo" HeaderText="Cupo" SortExpression="Cupo" />
-                <asp:BoundField DataField="IdMateria" HeaderText="IdMateria" SortExpression="IdMateria" />
-                <asp:BoundField DataField="IdComision" HeaderText="IdComision" SortExpression="IdComision" />
             </Columns>
         </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.CursoLogic"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetAllFullCurso" TypeName="Util.FullDataLogic"></asp:ObjectDataSource>
     </asp:Panel>
     <asp:Panel ID="PanelBotonesGrilla" CssClass="centered-content" Width="50%" runat="server">
         <asp:Button ID="BotonNuevo" runat="server" OnClick="BotonNuevo_Click" Text="Nuevo" CssClass="btn btn-lg  btn-dark" Width="30%" />
@@ -47,6 +50,8 @@
     
     </asp:Panel>
     <asp:Panel ID="PanelABM" CssClass="centered-content" Width="50%" runat="server">
+        <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
         <div class="form-group"><asp:Label ID="Label1" runat="server" Text="ID" Font-Size="Large"></asp:Label><asp:TextBox runat="server" ID="TextBoxId" ReadOnly="True" CssClass="form-control  form-control-lg" /></div>
         <div class="form-group"><asp:Label ID="Label3" runat="server" Text="Cupo" Font-Size="Large"></asp:Label><asp:TextBox runat="server" ID="TextBoxCupo" TextMode="Number" CssClass="form-control  form-control-lg" /><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="No debe quedar vacìo" ControlToValidate="TextBoxCupo" Font-Bold="True" ForeColor="Red" ValidationGroup="Validacion"></asp:RequiredFieldValidator><asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="-Rango numérico inválido" ControlToValidate="TextBoxCupo" Font-Bold="True" ForeColor="Red" MaximumValue="500" MinimumValue="0"></asp:RangeValidator></div>
         <div class="form-group"><asp:Label ID="Label4" runat="server" Text="Año" Font-Size="Large"></asp:Label><asp:TextBox runat="server" ID="TextBoxAnio" TextMode="Number" CssClass="form-control  form-control-lg" /><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="No debe quedar vacìo" ControlToValidate="TextBoxAnio" Font-Bold="True" ForeColor="Red" ValidationGroup="Validacion"></asp:RequiredFieldValidator><asp:RangeValidator runat="server" ErrorMessage="-Rango numérico inválido" ID="range2" ControlToValidate="TextBoxAnio" Font-Bold="True" ForeColor="Red" MaximumValue="2200" MinimumValue="1900" Type="Integer"></asp:RangeValidator></div>

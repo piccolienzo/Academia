@@ -12,7 +12,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder"  runat="server">
-
+    <div style="text-align:center"><h1>Reportes</h1></div>
     <asp:Panel CssClass="centered-text centered-content" runat="server">
         <br />
         <br />

@@ -19,10 +19,12 @@
         
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
+    <div style="text-align:center"><h1>Comisiones</h1></div>
     
     <asp:Panel ID="PanelGrilla" runat="server">
-        <asp:ObjectDataSource runat="server" ID="ObjectComisiones" SelectMethod="GetAll" TypeName="Business.Logic.ComisionLogic"></asp:ObjectDataSource>
+        <asp:ObjectDataSource runat="server" ID="ObjectComisiones" SelectMethod="GetAllFullComision" TypeName="Util.FullDataLogic"></asp:ObjectDataSource>
         <asp:GridView runat="server" ID="GridViewComisiones" AutoGenerateColumns="False" DataSourceID="ObjectComisiones" OnSelectedIndexChanged="GridViewComisiones_SelectedIndexChanged" CssClass="table table-striped" GridLines="Vertical" Font-Size="Large">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
@@ -34,30 +36,10 @@
                         <asp:Label ID="LabelId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Descripcion" SortExpression="Descripcion">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Descripcion") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("Descripcion") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="AñoEspecialidad" SortExpression="AñoEspecialidad">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("AñoEspecialidad") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("AñoEspecialidad") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="IdPlan" SortExpression="IdPlan">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("IdPlan") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="Label4" runat="server" Text='<%# Bind("IdPlan") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                <asp:BoundField DataField="AñoEspecialidad" HeaderText="AñoEspecialidad" SortExpression="AñoEspecialidad" />
+                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                <asp:BoundField DataField="IdPlan" HeaderText="IdPlan" SortExpression="IdPlan" />
+                <asp:BoundField DataField="NombrePlan" HeaderText="NombrePlan" SortExpression="NombrePlan" />
             </Columns>
         </asp:GridView>
     </asp:Panel>
@@ -67,6 +49,8 @@
         <asp:Button ID="BotonEliminar" runat="server" Text="Eliminar" OnClick="BotonEliminar_Click" CssClass="btn btn-lg  btn-dark" Width="30%" />
     </asp:Panel>
     <asp:Panel ID="PanelABM" CssClass="centered-content" Width="50%" runat="server">
+         <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
          <div class="form-group">
             <asp:label text="ID" runat="server" Font-Size="Large" />
             <asp:textbox runat="server" ID="TextBoxID" ReadOnly="True" CssClass="form-control form-control-lg " />

@@ -23,6 +23,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceHolder" runat="server">
+    <div style="text-align:center"><h1>Docentes - Cursos</h1></div>
     <asp:Panel ID="Panel1" runat="server">
         <asp:GridView ID="GridViewDocentesCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped" DataSourceID="ObjectDataSource1" Font-Size="Large" OnSelectedIndexChanged="GridViewDocentesCursos_SelectedIndexChanged">
             <Columns>
@@ -37,10 +38,11 @@
                 </asp:TemplateField>
                 <asp:BoundField DataField="IdCurso" HeaderText="IdCurso" SortExpression="IdCurso" />
                 <asp:BoundField DataField="IdDocente" HeaderText="IdDocente" SortExpression="IdDocente" />
+                <asp:BoundField DataField="NombreApellidoDocente" HeaderText="NombreApellidoDocente" SortExpression="NombreApellidoDocente" />
                 <asp:BoundField DataField="Cargo" HeaderText="Cargo" SortExpression="Cargo" />
             </Columns>
         </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.DocenteCursoLogic"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllFullDocenteCurso" TypeName="Util.FullDataLogic"></asp:ObjectDataSource>
     </asp:Panel>
     <asp:Panel ID="PanelBotonesGrilla" runat="server" CssClass="centered-content" Width="50%">
         <asp:Button ID="BotonNuevo" runat="server" OnClick="BotonNuevo_Click" Text="Nuevo" CssClass="btn btn-lg  btn-dark" Width="30%" />
@@ -48,6 +50,10 @@
         <asp:Button ID="BotonEliminar" runat="server" OnClick="BotonEliminar_Click" Text="Eliminar" CssClass="btn btn-lg  btn-dark" Width="30%" />
     </asp:Panel>
     <asp:Panel ID="PanelABM" runat="server" CssClass="centered-content" Width="50%">
+        
+
+ <div style="text-align:center"><h2>
+                <asp:Label Text="text" runat="server" ID="LabelModo" /></h2></div>
         <div class="form-group">
             <asp:Label ID="Label2" runat="server" Text="ID" Font-Size="Large"></asp:Label>
             <asp:TextBox ID="TextBoxID" runat="server" ReadOnly="True" CssClass="form-control form-control-lg"></asp:TextBox>

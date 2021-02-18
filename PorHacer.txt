@@ -1,13 +1,14 @@
 
 
+Ultima version : 2.2 added: Titulos+ titulos abms + campos en grillas web + visual reporte + volcado de datos en las notas.
 
 
 
 
-*Revisar validaciones escritorio
 
 
-*agregar validaciones web : Docentes cursos
-*Terminar ABM web: Docentes
 
-Ultima version : 1.9
+
+
+
+
